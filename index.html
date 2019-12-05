@@ -42,13 +42,6 @@
           </div>
           <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
-              <li>
-                <span
-                  data-uk-icon="icon:user"
-                  title="Your profile"
-                  data-uk-tooltip
-                ></span>
-              </li>
               <!-- <li><a href="#" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a></li>
 						<li><a href="#" data-uk-icon="icon:  sign-out" title="Sign Out" data-uk-tooltip></a></li> -->
               <li class=" uk-hidden@m">
@@ -90,7 +83,7 @@
         <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
           <li class="uk-nav-header">Lekcije</li>
           <li class="uk-parent">
-            <a href="#"
+            <a uk-scroll href="#"
               ><span
                 data-uk-icon="icon: thumbnails"
                 class="uk-margin-small-right"
@@ -98,32 +91,43 @@
               >HTML</a
             >
             <ul class="uk-nav-sub">
-              <li><a title="Uvod" href="#uvod">Uvod</a></li>
+              <li><a uk-scroll title="Uvod" href="#uvod">Uvod</a></li>
               <li>
                 <a title="Text" href="#">Text</a>
                 <ul class="uk-nav-sub">
-                  <li><a title="text-1" href="#text-1">Lekcija 01</a></li>
-                  <li><a title="text-2" href="#text-2">Lekcija 02</a></li>
-                  <li><a title="text-3" href="#text-3">Lekcija 03</a></li>
-                  <li><a title="text-4" href="#text-4">Lekcija 04</a></li>
+                  <li><a uk-scroll title="text-1" href="#text-1">Lekcija 01</a></li>
+                  <li><a uk-scroll title="text-2" href="#text-2">Lekcija 02</a></li>
+                  <li><a uk-scroll title="text-3" href="#text-3">Lekcija 03</a></li>
+                  <li><a uk-scroll title="text-4" href="#text-4">Lekcija 04</a></li>
                   <li>
-                    <a title="text zadatak-1" href="#textZadatak-1"
+                    <a uk-scroll title="text zadatak-1" href="#textZadatak-1"
                       >Zadatak 01</a
                     >
                   </li>
                   <li>
-                    <a title="text zadatak-2" href="#textZadatak-2"
+                    <a uk-scroll title="text zadatak-2" href="#textZadatak-2"
                       >Zadatak 02</a
                     >
                   </li>
                 </ul>
               </li>
-              <li><a title="Liste" href="#liste">Liste</a></li>
-              <li><a title="Grafika" href="#">Grafika</a></li>
-              <li><a title="Audio/Video" href="#">Audio/Video</a></li>
-              <li><a title="Linkovi" href="#">Linkovi</a></li>
-              <li><a title="Tablice" href="#">Tablice</a></li>
-              <li><a title="Obrasci" href="#">Obrasci</a></li>
+              <li><a uk-scroll title="Liste" href="#liste">Liste</a></li>
+			  <li><a uk-scroll title="Grafika" href="#">Grafika</a>
+				<ul class="uk-nav-sub">
+					<li><a uk-scroll title="grafika-1" href="#grafika-1">Lekcija 1 Img</a></li>
+					<li><a uk-scroll title="grafika-2" href="#grafika-2">Lekcija 2 SVG</a></li>
+					<li><a uk-scroll title="grafika-3" href="#grafika-3">Lekcija 3 Canvas</a></li>
+				</ul>
+			</li>
+              <li><a uk-scroll title="Audio/Video" href="#audio-video">Audio/Video</a></li>
+			  <li><a uk-scroll title="Linkovi" href="#linkovi">Linkovi</a>
+			<ul class="uk-nav-sub">
+				<li><a uk-scroll title="Linkovi" href="#linkovi">Lekcija</a></li>
+				<li><a uk-scroll title="Linkovi zadatak" href="#linkoviZadatak">Zadatak</a></li>
+			</ul>
+		</li>
+              <li><a uk-scroll title="Tablice" href="#">Tablice</a></li>
+              <li><a uk-scroll title="Obrasci" href="#">Obrasci</a></li>
               <li>
                 <a title="Strukturiranje sadržaja" href="#"
                   >Strukturiranje sadržaja</a
@@ -1056,6 +1060,1570 @@
           </div>
         </div>
         <div
+          id="grafika-1"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Grafika</h4>
+                  </div>
+                  <p>Lekcija 1</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<!-- img, relativne adrese, atributi -->
+					<img src="multimedia/images/gradovi/london.jpg" alt="London" width="760" height="430">
+					<img src="multimedia/images/ljudi/grupe-ljudi/na-ulici.jpg" alt="Ljudi na ulici" width="760" height="430">
+					<img src="multimedia/images/priroda/sume/red-forest.jpg" alt="Crvena šuma" width="760" height="430">
+					<img src="multimedia/images/logo/html-css.svg" alt="HTML-CSS">
+                  </li>
+                  <li>
+                    <pre><code>
+&lt;!-- img, relativne adrese, atributi --&gt;
+&lt;img src=&quot;../../../multimedia/images/gradovi/london.jpg&quot; alt=&quot;London&quot; width=&quot;760&quot;height=&quot;430&quot;&gt;
+&lt;img src=&quot;../../../multimedia/images/ljudi/grupe-ljudi/na-ulici.jpg&quot; alt=&quot;Ljudi na ulici&quot;width=&quot;760&quot; height=&quot;430&quot;&gt;
+&lt;img src=&quot;../../../multimedia/images/priroda/sume/red-forest.jpg&quot; alt=&quot;Crvena &scaron;uma&quot;width=&quot;760&quot; height=&quot;430&quot;&gt;
+&lt;img src=&quot;../../../multimedia/images/logo/html-css.svg&quot; alt=&quot;HTML-CSS&quot;&gt;				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="grafika-2"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Grafika</h4>
+                  </div>
+                  <p>Lekcija 2</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<svg width="400" height="200">
+						<rect width="200" height="100" x="100" y="50" fill="#F00" stroke="#333" stroke-width="2px" />
+					</svg>
+					<hr>
+					<svg width="400" height="200">
+						<circle cx="200" cy="100" r="85" fill="#F00" />
+					</svg>
+					<hr>
+					<svg width="400" height="200">
+						<ellipse cx="200" cy="100" rx="185" ry="85" fill="#F00" />
+					</svg>
+					<hr>
+					<svg width="400" height="200">
+						<line x1="0" y1="0" x2="300" y2="200" stroke="#F00" stroke-width="3px" />
+					</svg>
+					<hr>
+					<svg width="400" height="200">
+						<polygon points="200,20,380,180,20,180" stroke="#F00" stroke-width="3px" fill="#EEE" />
+					</svg>
+					
+					<hr>
+					<svg width="400" height="200">
+						<polyline points="20,20,60,20,60,40,100,40,100,60, 140,60,140,80" stroke="#F00" stroke-width="3px" fill="none" />
+					</svg>
+					
+					<svg height="200" width="500">
+						<text x="0" y="30" fill="red">Lorem ipsum</text>
+						<line x1="0" y1="38" x2="160" y2="38" stroke="#333" stroke-width="2px" />
+					</svg>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;svg width=&quot;400&quot; height=&quot;200&quot;&gt;
+					&lt;rect width=&quot;200&quot; height=&quot;100&quot; x=&quot;100&quot; y=&quot;50&quot; fill=&quot;#F00&quot;
+					stroke=&quot;#333&quot; stroke-width=&quot;2px&quot; /&gt;
+					&lt;/svg&gt;
+					&lt;hr&gt;
+					&lt;svg width=&quot;400&quot; height=&quot;200&quot;&gt;
+					&lt;circle cx=&quot;200&quot; cy=&quot;100&quot; r=&quot;85&quot; fill=&quot;#F00&quot; /&gt;
+					&lt;/svg&gt;
+					&lt;hr&gt;
+					&lt;svg width=&quot;400&quot; height=&quot;200&quot;&gt;
+					&lt;ellipse cx=&quot;200&quot; cy=&quot;100&quot; rx=&quot;185&quot; ry=&quot;85&quot; fill=&quot;#F00&quot; /&gt;
+					&lt;/svg&gt;
+					&lt;hr&gt;
+					&lt;svg width=&quot;400&quot; height=&quot;200&quot;&gt;
+					&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;300&quot; y2=&quot;200&quot; stroke=&quot;#F00&quot;
+					stroke-width=&quot;3px&quot; /&gt;
+					&lt;/svg&gt;
+					&lt;hr&gt;
+					&lt;svg width=&quot;400&quot; height=&quot;200&quot;&gt;
+					&lt;polygon points=&quot;200,20,380,180,20,180&quot; stroke=&quot;#F00&quot; stroke-width=&quot;3px&quot;
+					fill=&quot;#EEE&quot; /&gt;
+					&lt;/svg&gt;
+					
+					&lt;hr&gt;
+					&lt;svg width=&quot;400&quot; height=&quot;200&quot;&gt;
+					&lt;polyline points=&quot;20,20,60,20,60,40,100,40,100,60, 140,60,140,80&quot; stroke=&quot;#F00&quot;
+					stroke-width=&quot;3px&quot;
+					fill=&quot;none&quot; /&gt;
+					&lt;/svg&gt;
+					
+					&lt;svg height=&quot;200&quot; width=&quot;500&quot;&gt;
+					&lt;text x=&quot;0&quot; y=&quot;30&quot; fill=&quot;red&quot;&gt;Lorem ipsum&lt;/text&gt;
+					&lt;line x1=&quot;0&quot; y1=&quot;38&quot; x2=&quot;160&quot; y2=&quot;38&quot; stroke=&quot;#333&quot;
+					stroke-width=&quot;2px&quot; /&gt;
+					&lt;/svg&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="grafika-3"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Grafika</h4>
+                  </div>
+                  <p>Lekcija 3</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+                    
+					<h2>Linija</h2>
+					<canvas id="myCanvas" width="600" height="200"></canvas>
+					<script>
+						var c = document.getElementById("myCanvas");
+						var ctx = c.getContext("2d");
+
+						ctx.beginPath();
+						ctx.moveTo(30, 180);
+						ctx.lineTo(460, 30);
+						ctx.lineWidth = 8;
+						ctx.strokeStyle = "#F00"
+						ctx.stroke();
+					</script>
+					<h2>Kvadrat</h2>
+					
+					<canvas id="myCanvas1" width="600" height="200"></canvas>
+					<script>
+						var c = document.getElementById("myCanvas1"); //dohvaćanje canvasa
+						var ctx = c.getContext("2d") // kreiranje objekta
+
+						ctx.beginPath();
+						ctx.rect(20, 20, 150, 150);
+						ctx.fillStyle = "#FF6"
+						ctx.fill();
+
+						ctx.strokeStyle = "#333";
+						ctx.lineWidth = 5;
+						ctx.stroke();
+					</script>
+					
+					<h2>Krug</h2>
+					
+					<canvas id="myCanvas2" width="600" height="200"></canvas>
+					<script>
+						var c = document.getElementById("myCanvas2"); //dohvaćanje canvasa
+						var ctx = c.getContext("2d") // kreiranje objekta
+						var centerX = c.width / 2;
+						var centerY = c.height / 2;
+						var radius = 80;
+
+						ctx.beginPath();
+						ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); //starting angle as 0 and the ending angle as 2 * PI.;
+						ctx.fillStyle = "#F00";
+						ctx.fill();
+						ctx.strokeStyle = "#333";
+						ctx.lineWidth = 5;
+						ctx.stroke();
+					</script>
+					
+					<h2>Polukrug</h2>
+					
+					<canvas id="myCanvas3" width="600" height="200"></canvas>
+					<script>
+						var c = document.getElementById("myCanvas3"); //dohvaćanje canvasa
+						var ctx = c.getContext("2d") // kreiranje objekta
+						var centerX = c.width / 2;
+						var centerY = c.height / 2;
+						var radius = 80;
+
+						ctx.beginPath();
+						ctx.arc(centerX, centerY, radius, 0 * Math.PI, 1 * Math.PI); //starting angle as 0 and the ending angle as 1 * PI.;
+						ctx.closePath();
+						ctx.fillStyle = "#F00";
+						ctx.fill();
+						ctx.strokeStyle = "#333";
+						ctx.lineWidth = 5;
+						ctx.stroke();
+					</script>
+					
+					<h2>Proizvoljni oblici</h2>
+					<canvas id="myCanvas4" width="600" height="200"></canvas>
+					<script>
+						var c = document.getElementById('myCanvas4');
+						var ctx = c.getContext('2d');
+
+
+						ctx.beginPath();
+						ctx.moveTo(170, 80);
+						ctx.bezierCurveTo(130, 100, 130, 150, 230, 150);
+						ctx.bezierCurveTo(250, 180, 320, 180, 340, 150);
+						ctx.bezierCurveTo(420, 150, 420, 120, 390, 100);
+						ctx.bezierCurveTo(430, 40, 370, 30, 340, 50);
+						ctx.bezierCurveTo(320, 5, 250, 20, 250, 50);
+						ctx.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+
+						ctx.closePath();
+						ctx.lineWidth = 5;
+						ctx.strokeStyle = 'blue';
+						ctx.stroke();
+					</script>
+					
+					<h2>Tekst</h2>
+					<canvas id="myCanvas5" width="600" height="200"></canvas>
+					<script>
+						var c = document.getElementById("myCanvas5"); //dohvaćanje canvasa
+						var ctx = c.getContext("2d") // kreiranje objekta
+
+						var positionX = 50;
+						var positionY = 100;
+
+						ctx.font = "italic bold 60px 'Courier New'";
+						ctx.fillStyle = "#F60";
+						ctx.fillText("Hello World!", positionX, positionY);
+					</script>
+					
+					<h2>Gradijenti</h2>
+					<canvas id="myCanvas6" width="400" height="200"></canvas>
+					<script>
+						var c = document.getElementById("myCanvas6");
+						var ctx = c.getContext("2d");
+
+						var grd = ctx.createLinearGradient(0, 0, 400, 0);
+						grd.addColorStop(0, "#f00")
+						grd.addColorStop(0.5, "#0f0");
+						grd.addColorStop(1, "#FF0");
+
+						ctx.fillStyle = grd;
+						ctx.fillRect(0, 0, 400, 200);
+					</script>
+					
+					<canvas id="myCanvas7" width="400" height="200"></canvas>
+					<script>
+						var c = document.getElementById("myCanvas7");
+						var ctx = c.getContext("2d");
+
+						var grd = ctx.createRadialGradient(200, 100, 50, 200, 100, 150);
+						grd.addColorStop(0, "#f00")
+						grd.addColorStop(0.5, "#0f0");
+						grd.addColorStop(1, "#FF0");
+
+						ctx.fillStyle = grd;
+						ctx.fillRect(0, 0, 400, 200);
+					</script>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;h1&gt;Canvas&lt;/h1&gt;
+					&lt;h2&gt;Linija&lt;/h2&gt;
+					&lt;canvas id=&quot;myCanvas&quot; width=&quot;600&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c = document.getElementById(&quot;myCanvas&quot;);
+					var ctx = c.getContext(&quot;2d&quot;);
+					
+					ctx.beginPath();
+					ctx.moveTo(30, 180);
+					ctx.lineTo(460, 30);
+					ctx.lineWidth = 8;
+					ctx.strokeStyle = &quot;#F00&quot;
+					ctx.stroke();
+					&lt;/script&gt;
+					&lt;h2&gt;Kvadrat&lt;/h2&gt;
+					
+					&lt;canvas id=&quot;myCanvas1&quot; width=&quot;600&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c = document.getElementById(&quot;myCanvas1&quot;); //dohvaćanje canvasa
+					var ctx = c.getContext(&quot;2d&quot;) // kreiranje objekta
+					
+					ctx.beginPath();
+					ctx.rect(20, 20, 150, 150);
+					ctx.fillStyle = &quot;#FF6&quot;
+					ctx.fill();
+					
+					ctx.strokeStyle = &quot;#333&quot;;
+					ctx.lineWidth = 5;
+					ctx.stroke();
+					&lt;/script&gt;
+					
+					&lt;h2&gt;Krug&lt;/h2&gt;
+					
+					&lt;canvas id=&quot;myCanvas2&quot; width=&quot;600&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c = document.getElementById(&quot;myCanvas2&quot;); //dohvaćanje canvasa
+					var ctx = c.getContext(&quot;2d&quot;) // kreiranje objekta
+					var centerX = c.width / 2;
+					var centerY = c.height / 2;
+					var radius = 80;
+					
+					ctx.beginPath();
+					ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); //starting angle as 0 and the ending angle as 2 * PI.;
+					ctx.fillStyle = &quot;#F00&quot;;
+					ctx.fill();
+					ctx.strokeStyle = &quot;#333&quot;;
+					ctx.lineWidth = 5;
+					ctx.stroke();
+					&lt;/script&gt;
+					
+					&lt;h2&gt;Polukrug&lt;/h2&gt;
+					
+					&lt;canvas id=&quot;myCanvas3&quot; width=&quot;600&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c = document.getElementById(&quot;myCanvas3&quot;); //dohvaćanje canvasa
+					var ctx = c.getContext(&quot;2d&quot;) // kreiranje objekta
+					var centerX = c.width / 2;
+					var centerY = c.height / 2;
+					var radius = 80;
+					
+					ctx.beginPath();
+					ctx.arc(centerX, centerY, radius, 0 * Math.PI, 1 * Math.PI); //starting angle as 0 and the ending angle as 1 * PI.;
+					ctx.closePath();
+					ctx.fillStyle = &quot;#F00&quot;;
+					ctx.fill();
+					ctx.strokeStyle = &quot;#333&quot;;
+					ctx.lineWidth = 5;
+					ctx.stroke();
+					&lt;/script&gt;
+					
+					&lt;h2&gt;Proizvoljni oblici&lt;/h2&gt;
+					&lt;canvas id=&quot;myCanvas4&quot; width=&quot;600&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c = document.getElementById('myCanvas4');
+					var ctx = c.getContext('2d');
+					
+					
+					ctx.beginPath();
+					ctx.moveTo(170, 80);
+					ctx.bezierCurveTo(130, 100, 130, 150, 230, 150);
+					ctx.bezierCurveTo(250, 180, 320, 180, 340, 150);
+					ctx.bezierCurveTo(420, 150, 420, 120, 390, 100);
+					ctx.bezierCurveTo(430, 40, 370, 30, 340, 50);
+					ctx.bezierCurveTo(320, 5, 250, 20, 250, 50);
+					ctx.bezierCurveTo(200, 5, 150, 20, 170, 80);
+					
+					
+					ctx.closePath();
+					ctx.lineWidth = 5;
+					ctx.strokeStyle = 'blue';
+					ctx.stroke();
+					&lt;/script&gt;
+					
+					&lt;h2&gt;Tekst&lt;/h2&gt;
+					&lt;canvas id=&quot;myCanvas5&quot; width=&quot;600&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c = document.getElementById(&quot;myCanvas5&quot;); //dohvaćanje canvasa
+					var ctx = c.getContext(&quot;2d&quot;) // kreiranje objekta
+					
+					var positionX = 50;
+					var positionY = 100;
+					
+					ctx.font = &quot;italic bold 60px 'Courier New'&quot;;
+					ctx.fillStyle = &quot;#F60&quot;;
+					ctx.fillText(&quot;Hello World!&quot;, positionX, positionY);
+					&lt;/script&gt;
+					
+					&lt;h2&gt;Gradijenti&lt;/h2&gt;
+					&lt;canvas id=&quot;myCanvas6&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c = document.getElementById(&quot;myCanvas6&quot;);
+					var ctx = c.getContext(&quot;2d&quot;);
+					
+					var grd = ctx.createLinearGradient(0, 0, 400, 0);
+					grd.addColorStop(0, &quot;#f00&quot;)
+					grd.addColorStop(0.5, &quot;#0f0&quot;);
+					grd.addColorStop(1, &quot;#FF0&quot;);
+					
+					ctx.fillStyle = grd;
+					ctx.fillRect(0, 0, 400, 200);
+					&lt;/script&gt;
+					
+					&lt;canvas id=&quot;myCanvas7&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;
+					&lt;script&gt;
+					var c=document.getElementById(&quot;myCanvas7&quot;);
+					var ctx=c.getContext(&quot;2d&quot;);
+					
+					var grd=ctx.createRadialGradient(200,100,50,200,100,150);
+					grd.addColorStop(0,&quot;#f00&quot;)
+					grd.addColorStop(0.5,&quot;#0f0&quot;);
+					grd.addColorStop(1, &quot;#FF0&quot;);
+					
+					ctx.fillStyle=grd;
+					ctx.fillRect(0,0,400,200);
+					&lt;/script&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="audio-video"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Audio/Video</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<h1>Multimedijski sadržaji u HTML-u</h1>
+					<h2>Video</h2>
+					<video src="multimedia/video/mountains.mp4" controls width="720" height="404"></video>
+					<video controls width="720" height="404" loop autoplay muted>
+						<source src="multimedia/video/mountains.mp4" type="video/mp4">
+					</video>
+					
+					<video controls width="720" height="404">
+						<source src="multimedia/video/mountains.mp4" type="video/mp4">
+						<source src="multimedia/video/mountains.webm" type="video/webm">
+						<p>Vaš preglednik na podržava prikazivanje video sadržaja!</p>
+					</video>
+					<h2>Audio</h2>
+					<audio src="multimedia/audio/in3s.mp3" controls></audio>
+					<audio controls>
+						<source src="multimedia/audio/in3s.mp3" type="audio/mp3">
+					</audio>
+                  </li>
+                  <li>
+                    <pre><code>
+&lt;h1&gt;Multimedijski sadržaji u HTML-u&lt;/h1&gt;
+&lt;h2&gt;Video&lt;/h2&gt;
+&lt;video src=&quot;../../multimedia/video/mountains.mp4&quot; controls width=&quot;720&quot;
+height=&quot;404&quot;&gt;&lt;/video&gt;
+&lt;video controls width=&quot;720&quot; height=&quot;404&quot; loop autoplay muted&gt;
+&lt;source src=&quot;../../multimedia/video/mountains.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+
+&lt;video controls width=&quot;720&quot; height=&quot;404&quot;&gt;
+&lt;source src=&quot;../../multimedia/video/mountains.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;source src=&quot;../../multimedia/video/mountains.webm&quot; type=&quot;video/webm&quot;&gt;
+&lt;p&gt;Va&scaron; preglednik na podržava prikazivanje video sadržaja!&lt;/p&gt;
+&lt;/video&gt;
+&lt;h2&gt;Audio&lt;/h2&gt;
+&lt;audio src=&quot;../../multimedia/audio/in3s.mp3&quot; controls&gt;&lt;/audio&gt;
+&lt;audio controls&gt;
+&lt;source src=&quot;../../multimedia/audio/in3s.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+&lt;/audio&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="linkovi"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Linkovi</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<p>
+						<a href="#p1">Poglavlje 1</a> |
+						<a href="#p2">Poglavlje 2</a> |
+						<a href="#p3">Poglavlje 3</a>
+					</p>
+					
+					
+					<h1>Povezivanje dokumenata</h1>
+					<h2>Unutarnji linkovi</h2>
+					
+					<p>Saznajte što su <a href="dokumenti/linkovi.htm">poveznicee ili linkovi</a></p>
+					
+					<h2>Vanjski linkovi</h2>
+					<p>Posjetite stranice učilišta
+						<a href="https://www.algebra.hr/" target="_blank">Algebra</a></p>
+					<p><a href="https://meteo.hr/index.php?tab=prognoza&it=danas" target="_blank">Saznajte vremensku prognozu</a></p>
+					
+					<h2>Linkovi na određeni dio dokumenta (sidra)</h2>
+					<h3 id="p1">Poglavlje 1</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus ipsum,
+						mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue maximus
+						eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem dapibus,
+						pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales est. Morbi
+						cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula euismod lorem,
+						et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+						laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+						ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+						maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+						dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+						est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+						euismod lorem, et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+						laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+						ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+						maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+						dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+						est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+						euismod lorem, et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo laoreet.
+					</p>
+					
+					<p><a href="#">Povratak na vrh stranice</a></p>
+					
+					<h3 id="p2">Poglavlje 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus ipsum,
+						mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue maximus
+						eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem dapibus,
+						pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales est. Morbi
+						cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula euismod lorem,
+						et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+						laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+						ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+						maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+						dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+						est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+						euismod lorem, et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+						laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+						ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+						maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+						dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+						est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+						euismod lorem, et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo laoreet.
+					</p>
+					
+					<p><a href="#">Povratak na vrh stranice</a></p>
+					
+					<h3 id="p3">Poglavlje 3</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus ipsum,
+						mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue maximus
+						eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem dapibus,
+						pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales est. Morbi
+						cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula euismod lorem,
+						et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+						laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+						ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+						maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+						dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+						est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+						euismod lorem, et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+						laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+						ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+						maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+						dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+						est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+						euismod lorem, et rhoncus odio est vitae massa.
+					
+						Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+						tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+						Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+						imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+						pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+						Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+						justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+						sed leo. Vivamus ultricies porttitor eleifend.
+					
+						Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+						rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+						non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+						sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+						ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+						sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+						lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+						Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+						at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+						condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+						sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+						tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+						volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+						mattis.
+					
+						Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+						aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+						laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+						Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+						sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+						libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo laoreet.
+					</p>
+					
+					<p><a href="#">Povratak na vrh stranice</a></p>
+					
+					
+					
+					<h2>E-mail i tel linkovi</h2>
+					
+					<p>E-mail: <a href="mailto:pero.peric@blabla.com?subject=Poruka sa web stranice">pero.peric@blabla.com</a></p>
+					
+					<p>Tel: <a href="tel:+385-1-789654123">+385 1 789654123</a></p>
+					
+					<h2>Slika kao link</h2>
+					
+					<a href="https://www.w3schools.com/" target="_blank">
+						<img src="multimedia/images/logo/html-css.png" alt="w3c schools" width="500" height="386">
+					</a>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;p&gt;
+					&lt;a href=&quot;#p1&quot;&gt;Poglavlje 1&lt;/a&gt; |
+					&lt;a href=&quot;#p2&quot;&gt;Poglavlje 2&lt;/a&gt; |
+					&lt;a href=&quot;#p3&quot;&gt;Poglavlje 3&lt;/a&gt;
+					&lt;/p&gt;
+					
+					
+					&lt;h1&gt;Povezivanje dokumenata&lt;/h1&gt;
+					&lt;h2&gt;Unutarnji linkovi&lt;/h2&gt;
+					
+					&lt;p&gt;Saznajte &scaron;to su &lt;a href=&quot;dokumenti/linkovi.htm&quot;&gt;poveznicee ili
+					linkovi&lt;/a&gt;&lt;/p&gt;
+					
+					&lt;h2&gt;Vanjski linkovi&lt;/h2&gt;
+					&lt;p&gt;Posjetite stranice učili&scaron;ta
+					&lt;a href=&quot;https://www.algebra.hr/&quot; target=&quot;_blank&quot;&gt;Algebra&lt;/a&gt;&lt;/p&gt;
+					&lt;p&gt;&lt;a href=&quot;https://meteo.hr/index.php?tab=prognoza&amp;it=danas&quot;
+					target=&quot;_blank&quot;&gt;Saznajte vremensku prognozu&lt;/a&gt;&lt;/p&gt;
+					
+					&lt;h2&gt;Linkovi na određeni dio dokumenta (sidra)&lt;/h2&gt;
+					&lt;h3 id=&quot;p1&quot;&gt;Poglavlje 1&lt;/h3&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus ipsum,
+					mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue maximus
+					eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem dapibus,
+					pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales est. Morbi
+					cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula euismod lorem,
+					et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+					laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+					ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+					maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+					dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+					est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+					euismod lorem, et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+					laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+					ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+					maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+					dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+					est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+					euismod lorem, et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo laoreet.
+					&lt;/p&gt;
+					
+					&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Povratak na vrh stranice&lt;/a&gt;&lt;/p&gt;
+					
+					&lt;h3 id=&quot;p2&quot;&gt;Poglavlje 2&lt;/h3&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus ipsum,
+					mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue maximus
+					eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem dapibus,
+					pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales est. Morbi
+					cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula euismod lorem,
+					et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+					laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+					ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+					maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+					dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+					est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+					euismod lorem, et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+					laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+					ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+					maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+					dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+					est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+					euismod lorem, et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo laoreet.
+					&lt;/p&gt;
+					
+					&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Povratak na vrh stranice&lt;/a&gt;&lt;/p&gt;
+					
+					&lt;h3 id=&quot;p3&quot;&gt;Poglavlje 3&lt;/h3&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus ipsum,
+					mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue maximus
+					eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem dapibus,
+					pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales est. Morbi
+					cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula euismod lorem,
+					et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+					laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+					ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+					maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+					dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+					est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+					euismod lorem, et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo
+					laoreet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac scelerisque sem. Suspendisse tellus
+					ipsum, mollis sit amet arcu sit amet, vulputate varius augue. Donec sed leo condimentum felis rhoncus congue
+					maximus eget felis. Cras aliquet tellus sem, vel eleifend mauris scelerisque sit amet. Pellentesque non lorem
+					dapibus, pulvinar leo nec, sollicitudin quam. Maecenas sapien diam, efficitur eu convallis id, auctor sodales
+					est. Morbi cursus a metus suscipit pellentesque. Nunc porttitor, lorem vel pulvinar malesuada, ligula ligula
+					euismod lorem, et rhoncus odio est vitae massa.
+					
+					Nam imperdiet id nulla in condimentum. Nullam pretium pellentesque condimentum. Morbi pulvinar, turpis non
+					tincidunt fermentum, augue ante molestie massa, et feugiat mauris erat sed elit. Curabitur eu ullamcorper leo.
+					Nam ut sagittis sapien. Curabitur nibh velit, dignissim vel nisl sit amet, malesuada pulvinar justo. Nunc
+					imperdiet mollis orci, quis commodo est porta in. Integer ullamcorper sagittis aliquet. Sed fringilla
+					pellentesque justo, nec cursus quam rutrum finibus. Quisque facilisis arcu vitae lorem maximus imperdiet.
+					Vestibulum condimentum et purus in commodo. Aliquam erat volutpat. Nulla vestibulum laoreet turpis, id ornare
+					justo venenatis in. Phasellus tempus, sem a accumsan placerat, mauris ante pharetra lectus, quis faucibus est mi
+					sed leo. Vivamus ultricies porttitor eleifend.
+					
+					Curabitur at sodales ligula. Aliquam lorem nisi, mollis ac tellus vel, sodales tempus dolor. Donec in urna
+					rhoncus, varius ante ut, accumsan lectus. Praesent finibus, metus ac ornare hendrerit, sem magna aliquet erat,
+					non mollis ex orci a odio. Duis aliquam maximus velit, vitae maximus metus maximus ac. Cras pretium iaculis
+					sapien in mollis. Sed odio nisl, condimentum quis sapien ut, elementum feugiat dui. Maecenas lobortis massa at
+					ex faucibus, nec semper lacus eleifend. Aenean et pharetra libero. Sed ac libero eget mauris bibendum
+					sollicitudin vel sit amet ipsum. Aliquam imperdiet lectus nec risus egestas lobortis. In vulputate in ligula in
+					lacinia. Aliquam sodales suscipit imperdiet. Sed ornare convallis pretium.
+					
+					Sed non nibh ipsum. Maecenas nec cursus eros. Sed quis aliquet eros, in mattis urna. Nulla nec leo lorem. Aenean
+					at tellus tempor quam tempor egestas. Cras imperdiet, nisi sed pharetra viverra, eros urna ultricies nisi, et
+					condimentum eros neque et urna. Ut at consequat nisl. Nam consequat convallis libero vitae fringilla. Duis
+					sodales lorem sed nisi vulputate, eget mollis mi aliquam. Proin bibendum pulvinar dui, eget aliquam ligula
+					tincidunt eu. Aenean quis mauris vitae augue condimentum volutpat. Cras convallis, augue sit amet porta
+					volutpat, turpis tellus tempor quam, sed auctor ipsum libero sed ex. In elementum massa eu justo eleifend
+					mattis.
+					
+					Maecenas at aliquam massa, id placerat orci. Fusce convallis dapibus urna. Ut fringilla ipsum nec ex feugiat
+					aliquet. Aenean vitae tincidunt eros. Ut id lacus porta, ultrices sem in, consequat dui. Sed bibendum porta
+					laoreet. Suspendisse et ipsum consequat, vehicula eros nec, bibendum justo. Pellentesque vitae sagittis ligula.
+					Proin vehicula felis et egestas semper. Vivamus pellentesque magna et ultricies consequat. Maecenas massa ipsum,
+					sodales vel massa sed, tempus vulputate nisl. Vivamus imperdiet velit sit amet purus eleifend, vitae ornare
+					libero sollicitudin. Praesent lobortis lectus vitae enim auctor dictum. Mauris at orci ac est commodo laoreet.
+					&lt;/p&gt;
+					
+					&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Povratak na vrh stranice&lt;/a&gt;&lt;/p&gt;
+					
+					
+					
+					&lt;h2&gt;E-mail i tel linkovi&lt;/h2&gt;
+					
+					&lt;p&gt;E-mail: &lt;a href=&quot;mailto:pero.peric@blabla.com?subject=Poruka sa web
+					stranice&quot;&gt;pero.peric@blabla.com&lt;/a&gt;&lt;/p&gt;
+					
+					&lt;p&gt;Tel: &lt;a href=&quot;tel:+385-1-789654123&quot;&gt;+385 1 789654123&lt;/a&gt;&lt;/p&gt;
+					
+					&lt;h2&gt;Slika kao link&lt;/h2&gt;
+					
+					&lt;a href=&quot;https://www.w3schools.com/&quot; target=&quot;_blank&quot;&gt;
+					&lt;img src=&quot;../../multimedia/images/logo/html-css.png&quot; alt=&quot;w3c schools&quot; width=&quot;500&quot;
+					height=&quot;386&quot;&gt;
+					&lt;/a&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="linkoviZadatak"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Linkovi</h4>
+                  </div>
+                  <p>Zadatak</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<h1>Zaposlenici</h1>
+					<ul>
+						<li><a href="#maja">Maja Majić</a></li>
+						<li><a href="#pero">Pero Perić</a></li>
+						<li><a href="#ana">Ana Anić</a></li>
+					</ul>
+					<h2 id="maja">Maja Majić</h2>
+					<img src="multimedia/images/ljudi/lica/female-with-bobcut-hair.png" alt="Maja Majić" title="Maja Majić">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem, alias ipsa
+						cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi! Lorem
+						ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+						nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor,
+						sit amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+						necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum
+						dolor sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint
+						officiis repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem, alias ipsa
+						cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi! Lorem
+						ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+						nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor,
+						sit amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+						necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum
+						dolor sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint
+						officiis repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!</p>
+					<p><b>Tel:</b> <a href="tel:+385-1-452316987">+385 1 452316987</a></p>
+					<p>
+						<a href="mailto:maja.majic@blabla.com"><img src="multimedia/images/logo/mail.png" alt="e-mail"></a>
+					
+						<a href="https://facebook.com " target="_blank"><img src="multimedia/images/logo/facebook.png"
+								alt="Facebook"></a>
+						<a href="https://twitter.com" target="_blank"><img src="multimedia/images/logo/twitter.png"
+								alt="Twitter"></a>
+					</p>
+					<p><a href="#">Povratak na vrh stranice</a></p>
+					<h2 id="pero">Pero Perić</h2>
+					<img src="multimedia/images/ljudi/lica/man-close-up.png" alt="Pero Perić" title="Pero Perić">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem, alias ipsa
+						cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi! Lorem
+						ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+						nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor,
+						sit amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+						necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum
+						dolor sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint
+						officiis repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem, alias ipsa
+						cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi! Lorem
+						ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+						nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor,
+						sit amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+						necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum
+						dolor sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint
+						officiis repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!</p>
+					<p><b>Tel:</b> <a href="tel:+385-1-789456321">+385 1 789456321</a></p>
+					<p>
+						<a href="mailto:pero.peric@blabla.com"><img src="multimedia/images/logo/mail.png" alt="e-mail"></a>
+					
+						<a href="https://facebook.com " target="_blank"><img src="multimedia/images/logo/facebook.png"
+								alt="Facebook"></a>
+						<a href="https://twitter.com" target="_blank"><img src="multimedia/images/logo/twitter.png"
+								alt="Twitter"></a>
+					</p>
+					<p><a href="#">Povratak na vrh stranice</a></p>
+					<h2 id="ana">Ana Anić</h2>
+					<img src="multimedia/images/ljudi/lica/young-face-with-dark-short-hair.png" alt="Ana Anić" title="Ana Anić">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem, alias ipsa
+						cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi! Lorem
+						ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+						nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor,
+						sit amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+						necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum
+						dolor sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint
+						officiis repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem, alias ipsa
+						cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi! Lorem
+						ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+						nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor,
+						sit amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+						necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum
+						dolor sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint
+						officiis repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!</p>
+					<p><b>Tel:</b> <a href="tel:+385-1-789456321">+385 1 789456321</a></p>
+					<p>
+						<a href="mailto:ana.anic@blabla.com"><img src="multimedia/images/logo/mail.png" alt="e-mail"></a>
+					
+						<a href="https://facebook.com " target="_blank"><img src="multimedia/images/logo/facebook.png"
+								alt="Facebook"></a>
+						<a href="https://twitter.com" target="_blank"><img src="multimedia/images/logo/twitter.png"
+								alt="Twitter"></a>
+					</p>
+					<p><a href="#">Povratak na vrh stranice</a></p>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;h1&gt;Zaposlenici&lt;/h1&gt;
+					&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;#maja&quot;&gt;Maja Majić&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#pero&quot;&gt;Pero Perić&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#ana&quot;&gt;Ana Anić&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;h2 id=&quot;maja&quot;&gt;Maja Majić&lt;/h2&gt;
+					&lt;img src=&quot;../../../multimedia/images/ljudi/lica/female-with-bobcut-hair.png&quot; alt=&quot;Maja Majić&quot;
+					title=&quot;Maja Majić&quot;&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem,
+					alias ipsa cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+					nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor, sit
+					amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+					necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum dolor
+					sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint officiis
+					repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!&lt;/p&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem,
+					alias ipsa cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+					nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor, sit
+					amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+					necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum dolor
+					sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint officiis
+					repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!&lt;/p&gt;
+					&lt;p&gt;&lt;b&gt;Tel:&lt;/b&gt; &lt;a href=&quot;tel:+385-1-452316987&quot;&gt;+385 1 452316987&lt;/a&gt;&lt;/p&gt;
+					&lt;p&gt;
+					&lt;a href=&quot;mailto:maja.majic@blabla.com&quot;&gt;&lt;img src=&quot;../../../multimedia/images/logo/mail.png&quot;
+					alt=&quot;e-mail&quot;&gt;&lt;/a&gt;
+					
+					&lt;a href=&quot;https://facebook.com &quot; target=&quot;_blank&quot;&gt;&lt;img
+					src=&quot;../../../multimedia/images/logo/facebook.png&quot;
+					alt=&quot;Facebook&quot;&gt;&lt;/a&gt;
+					&lt;a href=&quot;https://twitter.com&quot; target=&quot;_blank&quot;&gt;&lt;img
+					src=&quot;../../../multimedia/images/logo/twitter.png&quot;
+					alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
+					&lt;/p&gt;
+					&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Povratak na vrh stranice&lt;/a&gt;&lt;/p&gt;
+					&lt;h2 id=&quot;pero&quot;&gt;Pero Perić&lt;/h2&gt;
+					&lt;img src=&quot;../../../multimedia/images/ljudi/lica/man-close-up.png&quot; alt=&quot;Pero Perić&quot;
+					title=&quot;Pero Perić&quot;&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem,
+					alias ipsa cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+					nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor, sit
+					amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+					necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum dolor
+					sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint officiis
+					repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!&lt;/p&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem,
+					alias ipsa cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+					nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor, sit
+					amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+					necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum dolor
+					sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint officiis
+					repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!&lt;/p&gt;
+					&lt;p&gt;&lt;b&gt;Tel:&lt;/b&gt; &lt;a href=&quot;tel:+385-1-789456321&quot;&gt;+385 1 789456321&lt;/a&gt;&lt;/p&gt;
+					&lt;p&gt;
+					&lt;a href=&quot;mailto:pero.peric@blabla.com&quot;&gt;&lt;img src=&quot;../../../multimedia/images/logo/mail.png&quot;
+					alt=&quot;e-mail&quot;&gt;&lt;/a&gt;
+					
+					&lt;a href=&quot;https://facebook.com &quot; target=&quot;_blank&quot;&gt;&lt;img
+					src=&quot;../../../multimedia/images/logo/facebook.png&quot;
+					alt=&quot;Facebook&quot;&gt;&lt;/a&gt;
+					&lt;a href=&quot;https://twitter.com&quot; target=&quot;_blank&quot;&gt;&lt;img
+					src=&quot;../../../multimedia/images/logo/twitter.png&quot;
+					alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
+					&lt;/p&gt;
+					&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Povratak na vrh stranice&lt;/a&gt;&lt;/p&gt;
+					&lt;h2 id=&quot;ana&quot;&gt;Ana Anić&lt;/h2&gt;
+					&lt;img src=&quot;../../../multimedia/images/ljudi/lica/young-face-with-dark-short-hair.png&quot; alt=&quot;Ana
+					Anić&quot; title=&quot;Ana Anić&quot;&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem,
+					alias ipsa cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+					nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor, sit
+					amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+					necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum dolor
+					sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint officiis
+					repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!&lt;/p&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic atque, modi, in repudiandae autem,
+					alias ipsa cupiditate harum fuga voluptatem similique repellat aliquam accusamus. Molestiae, optio. Modi, iusto. Quasi!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aut commodi? Similique, perspiciatis iure omnis
+					nobis, est odio molestias voluptas delectus ut animi quaerat porro ipsa quo in, debitis eligendi? Lorem ipsum dolor, sit
+					amet consectetur adipisicing elit. Est cupiditate debitis ipsa animi obcaecati ratione quia placeat aut non
+					necessitatibus culpa provident ut, impedit inventore cumque quae reprehenderit assumenda dignissimos. Lorem ipsum dolor
+					sit amet consectetur adipisicing elit. Quasi harum nemo voluptas fugit cupiditate, quidem ea eum quos sint officiis
+					repellat accusamus! Excepturi ipsum in quis odit nostrum mollitia quam!&lt;/p&gt;
+					&lt;p&gt;&lt;b&gt;Tel:&lt;/b&gt; &lt;a href=&quot;tel:+385-1-789456321&quot;&gt;+385 1 789456321&lt;/a&gt;&lt;/p&gt;
+					&lt;p&gt;
+					&lt;a href=&quot;mailto:ana.anic@blabla.com&quot;&gt;&lt;img src=&quot;../../../multimedia/images/logo/mail.png&quot;
+					alt=&quot;e-mail&quot;&gt;&lt;/a&gt;
+					
+					&lt;a href=&quot;https://facebook.com &quot; target=&quot;_blank&quot;&gt;&lt;img
+					src=&quot;../../../multimedia/images/logo/facebook.png&quot;
+					alt=&quot;Facebook&quot;&gt;&lt;/a&gt;
+					&lt;a href=&quot;https://twitter.com&quot; target=&quot;_blank&quot;&gt;&lt;img
+					src=&quot;../../../multimedia/images/logo/twitter.png&quot;
+					alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
+					&lt;/p&gt;
+					&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Povratak na vrh stranice&lt;/a&gt;&lt;/p&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
           id="tex"
           class="uk-grid uk-grid-medium viewport-height"
           data-uk-grid
@@ -1123,7 +2691,7 @@
         <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
           <li class="uk-nav-header">Lekcije</li>
           <li class="uk-parent">
-            <a href="#"
+            <a uk-scroll href="#"
               ><span
                 data-uk-icon="icon: thumbnails"
                 class="uk-margin-small-right"
@@ -1131,34 +2699,34 @@
               >HTML</a
             >
             <ul class="uk-nav-sub">
-              <li><a title="Uvod" href="#">Uvod</a></li>
+              <li><a uk-scroll title="Uvod" href="#">Uvod</a></li>
               <li>
-                <a title="Text" href="#">Text</a>
+                <a uk-scroll title="Text" href="#">Text</a>
                 <ul class="uk-nav-sub">
-                  <li><a title="text-1" href="#text-1">Lekcija 01</a></li>
-                  <li><a title="text-2" href="#text-2">Lekcija 02</a></li>
-                  <li><a title="text-3" href="#text-3">Lekcija 03</a></li>
-                  <li><a title="text-4" href="#text-4">Lekcija 04</a></li>
+                  <li><a uk-scroll title="text-1" href="#text-1">Lekcija 01</a></li>
+                  <li><a uk-scroll title="text-2" href="#text-2">Lekcija 02</a></li>
+                  <li><a uk-scroll title="text-3" href="#text-3">Lekcija 03</a></li>
+                  <li><a uk-scroll title="text-4" href="#text-4">Lekcija 04</a></li>
                   <li>
-                    <a title="text zadatak-1" href="#textZadatak-1"
+                    <a uk-scroll title="text zadatak-1" href="#textZadatak-1"
                       >Zadatak 01</a
                     >
                   </li>
                   <li>
-                    <a title="text zadatak-2" href="#textZadatak-2"
+                    <a uk-scroll title="text zadatak-2" href="#textZadatak-2"
                       >Zadatak 02</a
                     >
                   </li>
                 </ul>
               </li>
-              <li><a title="Liste" href="#liste">Liste</a></li>
-              <li><a title="Grafika" href="#">Grafika</a></li>
-              <li><a title="Audio/Video" href="#">Audio/Video</a></li>
-              <li><a title="Linkovi" href="#">Linkovi</a></li>
-              <li><a title="Tablice" href="#">Tablice</a></li>
-              <li><a title="Obrasci" href="#">Obrasci</a></li>
+              <li><a uk-scroll title="Liste" href="#liste">Liste</a></li>
+              <li><a uk-scroll title="Grafika" href="#">Grafika</a></li>
+              <li><a uk-scroll title="Audio/Video" href="#">Audio/Video</a></li>
+              <li><a uk-scroll title="Linkovi" href="#">Linkovi</a></li>
+              <li><a uk-scroll title="Tablice" href="#">Tablice</a></li>
+              <li><a uk-scroll title="Obrasci" href="#">Obrasci</a></li>
               <li>
-                <a title="Strukturiranje sadržaja" href="#"
+                <a uk-scroll title="Strukturiranje sadržaja" href="#"
                   >Strukturiranje sadržaja</a
                 >
               </li>
@@ -1166,7 +2734,7 @@
           </li>
           <hr />
           <li class="uk-parent uk-disabled" title="Why U touching me????">
-            <a href="#"
+            <a uk-scroll href="#"
               ><span
                 data-uk-icon="icon: comments"
                 class="uk-margin-small-right"
