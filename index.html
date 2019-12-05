@@ -745,6 +745,317 @@
           </div>
         </div>
         <div
+          id="liste"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Liste</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<h1>Liste u HTML-u</h1>
+					<h2>Redne (brojčane) liste</h2>
+					<ol>
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="1">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="I">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="i">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="A">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="a">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="a">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li type="1">Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="a" start="3">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="a">
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li value="1">Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					<br>
+					<ol type="a" reversed>
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Španjolska</li>
+						<li>Portugal</li>
+						<li>Grčka</li>
+						<li>Malta</li>
+					</ol>
+					
+					<h2>Simboličke liste</h2>
+					
+					<ul>
+						<li>Italija</li>
+						<li>Francuska</li>
+						<li>Grčka</li>
+						<li>Portugal</li>
+						<li>Španjolska</li>
+					</ul>
+					
+					<h2>Opisne liste</h2>
+					
+					<dl>
+						<dt>London</dt>
+						<dd>Glavni grad Engleske i UK</dd>
+						<dt>Pariz</dt>
+						<dd>Glavni grad Francuske</dd>
+						<dt>Madrid</dt>
+						<dd>Glavni grad Španjolske</dd>
+						<dt>Rim</dt>
+						<dd>Glavni grad Italije</dd>
+					</dl>
+					
+					<h2>Ugniježđene liste</h2>
+					
+					<ul>
+						<li>Afrika</li>
+						<li>Azija</li>
+						<li>Europa
+							<ol>
+								<li>Francuska</li>
+								<li>Španjolska
+									<ol>
+										<li>Madrid</li>
+										<li>Barcelona</li>
+										<li>Bilbao</li>
+										<li>...</li>
+									</ol>
+								</li>
+								<li>Italija</li>
+								<li>...</li>
+							</ol>
+					
+						</li>
+						<li>Australija</li>
+					</ul>
+                  </li>
+                  <li>
+                    <pre><code>
+&lt;h1&gt;Liste u HTML-u&lt;/h1&gt;
+&lt;h2&gt;Redne (brojčane) liste&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;I&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;i&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;A&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;a&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;a&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li type=&quot;1&quot;&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;a&quot; start=&quot;3&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;a&quot;&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li value=&quot;1&quot;&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;a&quot; reversed&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Malta&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Simboličke liste&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;Grčka&lt;/li&gt;
+&lt;li&gt;Portugal&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Opisne liste&lt;/h2&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;London&lt;/dt&gt;
+&lt;dd&gt;Glavni grad Engleske i UK&lt;/dd&gt;
+&lt;dt&gt;Pariz&lt;/dt&gt;
+&lt;dd&gt;Glavni grad Francuske&lt;/dd&gt;
+&lt;dt&gt;Madrid&lt;/dt&gt;
+&lt;dd&gt;Glavni grad &Scaron;panjolske&lt;/dd&gt;
+&lt;dt&gt;Rim&lt;/dt&gt;
+&lt;dd&gt;Glavni grad Italije&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2&gt;Ugniježđene liste&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Afrika&lt;/li&gt;
+&lt;li&gt;Azija&lt;/li&gt;
+&lt;li&gt;Europa
+&lt;ol&gt;
+&lt;li&gt;Francuska&lt;/li&gt;
+&lt;li&gt;&Scaron;panjolska
+&lt;ol&gt;
+&lt;li&gt;Madrid&lt;/li&gt;
+&lt;li&gt;Barcelona&lt;/li&gt;
+&lt;li&gt;Bilbao&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Italija&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/li&gt;
+&lt;li&gt;Australija&lt;/li&gt;
+&lt;/ul&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
           id="tex"
           class="uk-grid uk-grid-medium viewport-height"
           data-uk-grid
