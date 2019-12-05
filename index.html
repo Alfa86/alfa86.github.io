@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Algebra</title>
+	<!-- CSS FILES -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<style type="text/css">
+		.viewport-height {
+			height: 100vh;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!--HEADER-->
+	<header id="top-head" class="uk-position-fixed">
+		<div class="uk-container uk-container-expand uk-background-primary">
+			<nav class="uk-navbar uk-light" data-uk-navbar="mode:click; duration: 250">
+				<div class="uk-navbar-left">
+					<ul class="uk-navbar-nav uk-visible@m">
+						<li>
+							<a href="#">Settings <span data-uk-icon="icon: triangle-down"></span></a>
+							<div class="uk-navbar-dropdown">
+								<ul class="uk-nav uk-navbar-dropdown-nav">
+									<li class="uk-nav-header">YOUR ACCOUNT</li>
+									<li><a href="#"><span data-uk-icon="icon: info"></span> Summary</a></li>
+									<li><a href="#"><span data-uk-icon="icon: refresh"></span> Edit</a></li>
+									<li><a href="#"><span data-uk-icon="icon: settings"></span> Configuration</a></li>
+									<li class="uk-nav-divider"></li>
+									<li><a href="#"><span data-uk-icon="icon: image"></span> Your Data</a></li>
+									<li class="uk-nav-divider"></li>
+									<li><a href="#"><span data-uk-icon="icon: sign-out"></span> Logout</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="uk-navbar-right">
+					<ul class="uk-navbar-nav">
+						<li><a href="#" data-uk-icon="icon:user" title="Your profile" data-uk-tooltip></a></li>
+						<li><a href="#" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a></li>
+						<li><a href="#" data-uk-icon="icon:  sign-out" title="Sign Out" data-uk-tooltip></a></li>
+						<li><a class="uk-navbar-toggle" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"
+								title="Offcanvas" data-uk-tooltip></a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--/HEADER-->
+	<!-- LEFT BAR -->
+	<aside id="left-col" class="uk-light uk-visible@m">
+		<!-- <div class="left-content-box  content-box-dark">
+				
+				<div class="uk-position-relative uk-text-center uk-display-block">
+				    <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
+				    	<ul class="uk-nav uk-dropdown-nav uk-text-left">
+								<li><a href="#"><span data-uk-icon="icon: info"></span> Summary</a></li>
+								<li><a href="#"><span data-uk-icon="icon: refresh"></span> Edit</a></li>
+								<li><a href="#"><span data-uk-icon="icon: settings"></span> Configuration</a></li>
+								<li class="uk-nav-divider"></li>
+								<li><a href="#"><span data-uk-icon="icon: image"></span> Your Data</a></li>
+								<li class="uk-nav-divider"></li>
+								<li><a href="#"><span data-uk-icon="icon: sign-out"></span> Sign Out</a></li>
+					    </ul>
+				    </div>
+				</div>
+			</div> -->
+
+		<div class="left-nav-wrap">
+			<ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+				<li class="uk-nav-header">Lekcije</li>
+				<li class="uk-parent"><a href="#"><span data-uk-icon="icon: thumbnails"
+							class="uk-margin-small-right"></span>HTML</a>
+					<ul class="uk-nav-sub">
+						<li><a title="Uvod" href="#">Uvod</a></li>
+						<li><a title="Text" href="#">Text</a>
+							<ul class="uk-nav-sub">
+								<li><a title="text-1" href="#text-1">01</a></li>
+								<li><a title="text-2" href="#text-2">02</a></li>
+								<li><a title="text-3" href="#text-3">03</a></li>
+							</ul>
+						</li>
+						<li><a title="Liste" href="#liste">Liste</a></li>
+						<li><a title="Grafika" href="#">Grafika</a></li>
+						<li><a title="Audio/Video" href="#">Audio/Video</a></li>
+						<li><a title="Linkovi" href="#">Linkovi</a></li>
+						<li><a title="Tablice" href="#">Tablice</a></li>
+						<li><a title="Obrasci" href="#">Obrasci</a></li>
+						<li><a title="Strukturiranje sadržaja" href="#">Strukturiranje sadržaja</a></li>
+					</ul>
+				</li>
+				<hr>
+				<li class="uk-parent uk-disabled" title="Why U touching me????">
+					<a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>CSS</a>
+					<ul class="uk-nav-sub">
+						<li><a href="#">Sub item</a></li>
+						<li><a href="#">Sub item</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+		<div class="bar-bottom">
+			<ul class="uk-subnav uk-flex uk-flex-center uk-child-width-1-5" data-uk-grid>
+				<li>
+					<a href="https://igor-apfentaler.from.hr/" class="uk-icon-link" data-uk-icon="icon: home"
+						title="Igor Apfentaler" data-uk-tooltip></a>
+				</li>
+				<!-- <li>
+						<a href="#" class="uk-icon-link" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a>
+					</li>
+					<li>
+						<a href="#" class="uk-icon-link" data-uk-icon="icon: social"  title="Social" data-uk-tooltip></a>
+					</li>
+					
+					<li>
+						<a href="#" class="uk-icon-link" data-uk-tooltip="Sign out" data-uk-icon="icon: sign-out"></a>
+					</li> -->
+			</ul>
+		</div>
+	</aside>
+	<!-- /LEFT BAR -->
+	<!-- CONTENT -->
+	<div id="content" data-uk-height-viewport="expand: true">
+		<div class="uk-container uk-container-expand ">
+			<div id="text" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
+
+				<!-- panel -->
+				<div class="uk-width-1-1@l">
+					<div class="uk-card uk-card-default uk-card">
+						<div class="uk-card-header">
+							<div class="uk-grid uk-grid-small">
+								<div class="uk-width-auto">
+									<h4>Text</h4>
+								</div>
+								<p>Lekcija 01</p>
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<ul uk-tab uk-switcher="connect: #test; animation: uk-animation-fade;">
+								<li class="uk-active"><a href="#">Preview</a></li>
+								<li><a href="#">Markup</a></li>
+							</ul>
+							<ul id="test" class="uk-switcher uk-margin">
+								<li>
+									<h1>Naslov 1. razine</h1>
+									<h2>Naslov 2. razine</h2>
+									<h3>Naslov 3. razine</h3>
+									<h4>Naslov 4. razine</h4>
+									<h5>Naslov 5. razine</h5>
+									<h6>Naslov 6. razine</h6>
+								</li>
+								<li>
+									<pre><code>
+	&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
+	&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
+	&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
+	&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
+	&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
+	&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
+</code></pre>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="text-1" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
+
+				<!-- panel -->
+				<div class="uk-width-1-2@l">
+					<div class="uk-card uk-card-default uk-card">
+						<div class="uk-card-header">
+							<div class="uk-grid uk-grid-small">
+								<div class="uk-width-auto">
+									<h4>Sales Chart</h4>
+								</div>
+								<p>Preview</p>
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<h1>Naslov 1. razine</h1>
+							<h2>Naslov 2. razine</h2>
+							<h3>Naslov 3. razine</h3>
+							<h4>Naslov 4. razine</h4>
+							<h5>Naslov 5. razine</h5>
+							<h6>Naslov 6. razine</h6>
+						</div>
+					</div>
+				</div>
+				<!-- /panel -->
+				<!-- panel -->
+				<div class="uk-width-1-2@l">
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<div class="uk-card-header">
+							<div class="uk-grid uk-grid-small">
+								<div class="uk-width-auto">
+									<h4>Predictions Chart</h4>
+								</div>
+								<p>Markup</p>
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<pre><code>
+									&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
+									&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
+									&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
+									&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
+									&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
+									&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
+								</code></pre>
+						</div>
+					</div>
+				</div>
+				<!-- /panel -->
+			</div>
+			<div id="text-2" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
+
+				<!-- panel -->
+				<div class="uk-width-1-2@l">
+					<div class="uk-card uk-card-default uk-card">
+						<div class="uk-card-header">
+							<div class="uk-grid uk-grid-small">
+								<div class="uk-width-auto">
+									<h4>Sales Chart</h4>
+								</div>
+								<p>Preview</p>
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<h1>Naslov 1. razine</h1>
+							<h2>Naslov 2. razine</h2>
+							<h3>Naslov 3. razine</h3>
+							<h4>Naslov 4. razine</h4>
+							<h5>Naslov 5. razine</h5>
+							<h6>Naslov 6. razine</h6>
+						</div>
+					</div>
+				</div>
+				<!-- /panel -->
+				<!-- panel -->
+				<div class="uk-width-1-2@l">
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<div class="uk-card-header">
+							<div class="uk-grid uk-grid-small">
+								<div class="uk-width-auto">
+									<h4>Predictions Chart</h4>
+								</div>
+								<p>Markup</p>
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<pre><code>
+									&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
+									&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
+									&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
+									&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
+									&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
+									&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
+								</code></pre>
+						</div>
+					</div>
+				</div>
+				<!-- /panel -->
+			</div>
+			<div id="text-3" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
+
+				<!-- panel -->
+				<div class="uk-width-1-2@l">
+					<div class="uk-card uk-card-default uk-card">
+						<div class="uk-card-header">
+							<div class="uk-grid uk-grid-small">
+								<div class="uk-width-auto">
+									<h4>Sales Chart</h4>
+								</div>
+								<p>Preview</p>
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<h1>Naslov 1. razine</h1>
+							<h2>Naslov 2. razine</h2>
+							<h3>Naslov 3. razine</h3>
+							<h4>Naslov 4. razine</h4>
+							<h5>Naslov 5. razine</h5>
+							<h6>Naslov 6. razine</h6>
+						</div>
+					</div>
+				</div>
+				<!-- /panel -->
+				<!-- panel -->
+				<div class="uk-width-1-2@l">
+					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+						<div class="uk-card-header">
+							<div class="uk-grid uk-grid-small">
+								<div class="uk-width-auto">
+									<h4>Predictions Chart</h4>
+								</div>
+								<p>Markup</p>
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<pre><code>
+									&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
+									&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
+									&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
+									&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
+									&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
+									&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
+								</code></pre>
+						</div>
+					</div>
+				</div>
+				<!-- /panel -->
+			</div>
+			<footer class="uk-section uk-section-small uk-text-center">
+				<hr>
+				<p class="uk-text-small uk-text-center">Algebra predavanja 2019 </p>
+			</footer>
+		</div>
+
+	</div>
+	<!-- /CONTENT -->
+	<!-- OFFCANVAS -->
+	<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+		<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+			<button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+			<ul class="uk-nav uk-nav-default">
+				<li class="uk-active"><a href="#">Active</a></li>
+				<li class="uk-parent">
+					<a href="#">Parent</a>
+					<ul class="uk-nav-sub">
+						<li><a href="#">Sub item</a></li>
+						<li><a href="#">Sub item</a></li>
+					</ul>
+				</li>
+				<li class="uk-nav-header">Header</li>
+				<li><a href="#js-options"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: table"></span>
+						Item</a></li>
+				<li><a href="#"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnails"></span>
+						Item</a></li>
+				<li class="uk-nav-divider"></li>
+				<li><a href="#"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: trash"></span> Item</a>
+				</li>
+			</ul>
+			<h3>Title</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+				ex ea commodo consequat.</p>
+		</div>
+	</div>
+	<!-- /OFFCANVAS -->
+
+	<!-- JS FILES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<script src="js/chartScripts.js"></script>
+</body>
+
+</html>
