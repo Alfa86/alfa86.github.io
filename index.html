@@ -134,7 +134,12 @@
 					<li><a uk-scroll title="Tablice zadatak 3" href="#tabliceZadatak-3">Zadatak 3</a></li>
 				</ul>
 			</li>
-              <li><a uk-scroll title="Obrasci" href="#">Obrasci</a></li>
+			  <li><a uk-scroll title="Obrasci" href="#obrasci">Obrasci</a>
+			<ul class="uk-nav-sub">
+				<li><a uk-scroll title="Obrasci Lekcija" href="#obrasci">Lekcija</a></li>
+				<li><a uk-scroll title="Obrasci zadatak" href="#obrasciZadatak">Zadatak</a></li>
+			</ul>
+			</li>
               <li>
                 <a title="Strukturiranje sadržaja" href="#"
                   >Strukturiranje sadržaja</a
@@ -3335,11 +3340,400 @@ height=&quot;404&quot;&gt;&lt;/video&gt;
           </div>
         </div>
         <div
-          id="tex"
+          id="obrasci"
           class="uk-grid uk-grid-medium viewport-height"
           data-uk-grid
         >
           <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Obrasci</h4>
+                  </div>
+                  <p>Lekcija 12</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<form name="obrazac1" action="" method="post" enctype="multipart/form-data" autocomplete="off">
+					
+						<p>
+							<label for="ime">Ime i prezime</label><br>
+							<input id="ime" name="imeiprezime" type="text" size="30" maxlength="20" placeholder="vaše ime" required>
+						</p>
+					
+						<p>
+							<label for="mail">E-mail adresa</label><br>
+							<input id="mail" name="email" type="email" size="20" maxlength="20" placeholder="@">
+						</p>
+					
+						<p>
+							<label for="tel">Telefon</label><br>
+							<input id="tel" name="tel" type="tel">
+						</p>
+					
+						<p>
+							<label for="zaporka">Vaša zaporka</label><br>
+							<input id="zaporka" name="zaporka" type="password" size="10" maxlength="8" disabled>
+						</p>
+					
+						<p>
+							<label for="boja">Boja</label>
+							<input id="boja" name="boja" type="color">
+						</p>
+					
+						<p>
+							<label for="obavijesti">Želim primati obavijesti</label>
+							<input id="obavijesti" name="newsletter" type="checkbox" value="true" checked>
+						</p>
+					
+					
+					
+						<p>
+							Ocijenite usluge naše tvrtke<br>
+							<label for="o1">1</label>
+							<input id="o1" name="ocjena" type="radio" value="1">
+							<label for="o2">2</label>
+							<input id="o2" name="ocjena" type="radio" value="2">
+							<label for="o3">3</label>
+							<input id="o3" name="ocjena" type="radio" value="3">
+							<label for="o4">4</label>
+							<input id="o4" name="ocjena" type="radio" value="4">
+							<label for="o5">5</label>
+							<input id="o5" name="ocjena" type="radio" value="5">
+						</p>
+					
+						<p>
+							<label for="dokument">Priložite dokument</label><br>
+							<input id="dokument" name="dokument" type="file">
+						</p>
+					
+						<p>
+							<label for="datum">Odaberite datum</label><br>
+							<input id="datum" name="datum" type="date" min="1984-12-31" max="2020-06-30">
+						</p>
+					
+						<p>
+							<label for="komentar">Upišite vaš komentar</label><br>
+							<textarea id="komentar" name="komentar" cols="45" rows="10" required maxlength="999"></textarea>
+						</p>
+					
+						<p>
+							<label for="grad">Odaberite seminar</label><br>
+							<select id="grad" name="grad">
+								<option value="london">London</option>
+								<option value="pariz" selected>Pariz</option>
+								<option value="rim">Rim</option>
+							</select>
+						</p>
+					
+						<p>
+							<label for="grad2">Odaberite seminar</label><br>
+							<select id="grad2" name="grad">
+								<option value="london">London</option>
+								<option value="pariz" selected>Pariz</option>
+								<option value="rim">Rim</option>
+							</select>
+						</p>
+					
+						<p>
+							<label for="grad3">Odaberite ili upišite grad</label><br>
+							<input id="grad3" name="grad" type="text" list="gradovi">
+							<datalist id="gradovi">
+								<option value="London">
+								<option value="Pariz">
+								<option value="Rim">
+							</datalist>
+					
+						</p>
+					
+						<p>
+							<input name="reset_btn" type="reset" value="Poništi obrazac">
+							<input name="submit_btn" type="submit" value="Pošalji podatke">
+						</p>
+					
+					
+					
+					</form>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;form name=&quot;obrazac1&quot; action=&quot;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;
+					autocomplete=&quot;off&quot;&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;ime&quot;&gt;Ime i prezime&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;ime&quot; name=&quot;imeiprezime&quot; type=&quot;text&quot; size=&quot;30&quot;
+					maxlength=&quot;20&quot; placeholder=&quot;va&scaron;e ime&quot; required&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;mail&quot;&gt;E-mail adresa&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;mail&quot; name=&quot;email&quot; type=&quot;email&quot; size=&quot;20&quot; maxlength=&quot;20&quot;
+					placeholder=&quot;@&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;tel&quot;&gt;Telefon&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;tel&quot; name=&quot;tel&quot; type=&quot;tel&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;zaporka&quot;&gt;Va&scaron;a zaporka&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;zaporka&quot; name=&quot;zaporka&quot; type=&quot;password&quot; size=&quot;10&quot;
+					maxlength=&quot;8&quot; disabled&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;boja&quot;&gt;Boja&lt;/label&gt;
+					&lt;input id=&quot;boja&quot; name=&quot;boja&quot; type=&quot;color&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;obavijesti&quot;&gt;Želim primati obavijesti&lt;/label&gt;
+					&lt;input id=&quot;obavijesti&quot; name=&quot;newsletter&quot; type=&quot;checkbox&quot; value=&quot;true&quot;
+					checked&gt;
+					&lt;/p&gt;
+					
+					
+					
+					&lt;p&gt;
+					Ocijenite usluge na&scaron;e tvrtke&lt;br&gt;
+					&lt;label for=&quot;o1&quot;&gt;1&lt;/label&gt;
+					&lt;input id=&quot;o1&quot; name=&quot;ocjena&quot; type=&quot;radio&quot; value=&quot;1&quot;&gt;
+					&lt;label for=&quot;o2&quot;&gt;2&lt;/label&gt;
+					&lt;input id=&quot;o2&quot; name=&quot;ocjena&quot; type=&quot;radio&quot; value=&quot;2&quot;&gt;
+					&lt;label for=&quot;o3&quot;&gt;3&lt;/label&gt;
+					&lt;input id=&quot;o3&quot; name=&quot;ocjena&quot; type=&quot;radio&quot; value=&quot;3&quot;&gt;
+					&lt;label for=&quot;o4&quot;&gt;4&lt;/label&gt;
+					&lt;input id=&quot;o4&quot; name=&quot;ocjena&quot; type=&quot;radio&quot; value=&quot;4&quot;&gt;
+					&lt;label for=&quot;o5&quot;&gt;5&lt;/label&gt;
+					&lt;input id=&quot;o5&quot; name=&quot;ocjena&quot; type=&quot;radio&quot; value=&quot;5&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;dokument&quot;&gt;Priložite dokument&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;dokument&quot; name=&quot;dokument&quot; type=&quot;file&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;datum&quot;&gt;Odaberite datum&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;datum&quot; name=&quot;datum&quot; type=&quot;date&quot; min=&quot;1984-12-31&quot;
+					max=&quot;2020-06-30&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;komentar&quot;&gt;Upi&scaron;ite va&scaron; komentar&lt;/label&gt;&lt;br&gt;
+					&lt;textarea id=&quot;komentar&quot; name=&quot;komentar&quot; cols=&quot;45&quot; rows=&quot;10&quot; required
+					maxlength=&quot;999&quot;&gt;&lt;/textarea&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;grad&quot;&gt;Odaberite seminar&lt;/label&gt;&lt;br&gt;
+					&lt;select id=&quot;grad&quot; name=&quot;grad&quot;&gt;
+					&lt;option value=&quot;london&quot;&gt;London&lt;/option&gt;
+					&lt;option value=&quot;pariz&quot; selected&gt;Pariz&lt;/option&gt;
+					&lt;option value=&quot;rim&quot;&gt;Rim&lt;/option&gt;
+					&lt;/select&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;grad2&quot;&gt;Odaberite seminar&lt;/label&gt;&lt;br&gt;
+					&lt;select id=&quot;grad2&quot; name=&quot;grad&quot;&gt;
+					&lt;option value=&quot;london&quot;&gt;London&lt;/option&gt;
+					&lt;option value=&quot;pariz&quot; selected&gt;Pariz&lt;/option&gt;
+					&lt;option value=&quot;rim&quot;&gt;Rim&lt;/option&gt;
+					&lt;/select&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;grad3&quot;&gt;Odaberite ili upi&scaron;ite grad&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;grad3&quot; name=&quot;grad&quot; type=&quot;text&quot; list=&quot;gradovi&quot;&gt;
+					&lt;datalist id=&quot;gradovi&quot;&gt;
+					&lt;option value=&quot;London&quot;&gt;
+					&lt;option value=&quot;Pariz&quot;&gt;
+					&lt;option value=&quot;Rim&quot;&gt;
+					&lt;/datalist&gt;
+					
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;input name=&quot;reset_btn&quot; type=&quot;reset&quot; value=&quot;Poni&scaron;ti obrazac&quot;&gt;
+					&lt;input name=&quot;submit_btn&quot; type=&quot;submit&quot; value=&quot;Po&scaron;alji podatke&quot;&gt;
+					&lt;/p&gt;
+					
+					
+					
+					&lt;/form&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="obrasciZadatak"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Obrasci</h4>
+                  </div>
+                  <p>Zadatak</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<form name="prijava" action="" method="post" enctype="multipart/form-data" autocomplete="on">
+						<p>
+							<label for="ime">Ime i prezime *</label><br>
+							<input id="ime" type="text" name="ime" required placeholder="Vaše ime i prezime">
+						</p>
+					
+						<p>
+							<label for="e-adresa">E-mail adresa *</label><br>
+							<input id="e-adresa" type="email" name="e-adresa" required placeholder="Upišite valjanu e-mail adresu"
+								size="30">
+						</p>
+					
+						<p>
+							<label for="telefon">Kontakt broj telefona</label><br>
+							<input id="telefon" type="tel" name="telefon" required>
+						</p>
+						<p>
+							<label for="datum">Datum rođenja</label><br>
+							<input id="datum" type="date" name="datum" required>
+					
+						</p>
+						<p>
+							Koje jezike govorite?<br>
+							<label for="engleski">Engleski</label>
+							<input id="engleski" name="jezik" type="checkbox" value="engleski">
+							<label for="talijanski">Talijanski</label>
+							<input id="talijanski" name="jezik" type="checkbox" value="talijanski">
+							<label for="njemacki">Njemački</label>
+							<input id="njemacki" name="jezik" type="checkbox" value="njemacki">
+							<label for="francuski">Francuski</label>
+							<input id="francuski" name="jezik" type="checkbox" value="francuski">
+							<label for="spanjolski">Španjolski</label>
+							<input id="spanjolski" name="jezik" type="checkbox" value="spanjolski">
+						</p>
+						<p>
+							Da li ste do sada koristili usluge naše tvrtke?<br>
+							<label for="usluge-da">Da</label>
+							<input id="usluge-da" type="radio" name="usluge" value="yes">
+							<label for="usluge-ne">Da</label>
+							<input id="usluge-ne" type="radio" name="usluge" value="no">
+						</p>
+					
+						<p>
+							<label for="cv">Priložite životopis</label><br>
+							<input id="cv" name="cv" type="file" required>
+						</p>
+					
+						<p>
+							<input name="reset_btn" type="reset" value="Poništi">
+							<input name="submit_btn" type="submit" value="Prijavi se">
+						</p>
+					
+					
+					</form>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;form name=&quot;prijava&quot; action=&quot;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;
+					autocomplete=&quot;on&quot;&gt;
+					&lt;p&gt;
+					&lt;label for=&quot;ime&quot;&gt;Ime i prezime *&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;ime&quot; type=&quot;text&quot; name=&quot;ime&quot; required placeholder=&quot;Va&scaron;e ime i
+					prezime&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;e-adresa&quot;&gt;E-mail adresa *&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;e-adresa&quot; type=&quot;email&quot; name=&quot;e-adresa&quot; required
+					placeholder=&quot;Upi&scaron;ite valjanu e-mail adresu&quot;
+					size=&quot;30&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;telefon&quot;&gt;Kontakt broj telefona&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;telefon&quot; type=&quot;tel&quot; name=&quot;telefon&quot; required&gt;
+					&lt;/p&gt;
+					&lt;p&gt;
+					&lt;label for=&quot;datum&quot;&gt;Datum rođenja&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;datum&quot; type=&quot;date&quot; name=&quot;datum&quot; required&gt;
+					
+					&lt;/p&gt;
+					&lt;p&gt;
+					Koje jezike govorite?&lt;br&gt;
+					&lt;label for=&quot;engleski&quot;&gt;Engleski&lt;/label&gt;
+					&lt;input id=&quot;engleski&quot; name=&quot;jezik&quot; type=&quot;checkbox&quot; value=&quot;engleski&quot;&gt;
+					&lt;label for=&quot;talijanski&quot;&gt;Talijanski&lt;/label&gt;
+					&lt;input id=&quot;talijanski&quot; name=&quot;jezik&quot; type=&quot;checkbox&quot; value=&quot;talijanski&quot;&gt;
+					&lt;label for=&quot;njemacki&quot;&gt;Njemački&lt;/label&gt;
+					&lt;input id=&quot;njemacki&quot; name=&quot;jezik&quot; type=&quot;checkbox&quot; value=&quot;njemacki&quot;&gt;
+					&lt;label for=&quot;francuski&quot;&gt;Francuski&lt;/label&gt;
+					&lt;input id=&quot;francuski&quot; name=&quot;jezik&quot; type=&quot;checkbox&quot; value=&quot;francuski&quot;&gt;
+					&lt;label for=&quot;spanjolski&quot;&gt;&Scaron;panjolski&lt;/label&gt;
+					&lt;input id=&quot;spanjolski&quot; name=&quot;jezik&quot; type=&quot;checkbox&quot; value=&quot;spanjolski&quot;&gt;
+					&lt;/p&gt;
+					&lt;p&gt;
+					Da li ste do sada koristili usluge na&scaron;e tvrtke?&lt;br&gt;
+					&lt;label for=&quot;usluge-da&quot;&gt;Da&lt;/label&gt;
+					&lt;input id=&quot;usluge-da&quot; type=&quot;radio&quot; name=&quot;usluge&quot; value=&quot;yes&quot;&gt;
+					&lt;label for=&quot;usluge-ne&quot;&gt;Da&lt;/label&gt;
+					&lt;input id=&quot;usluge-ne&quot; type=&quot;radio&quot; name=&quot;usluge&quot; value=&quot;no&quot;&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;label for=&quot;cv&quot;&gt;Priložite životopis&lt;/label&gt;&lt;br&gt;
+					&lt;input id=&quot;cv&quot; name=&quot;cv&quot; type=&quot;file&quot; required&gt;
+					&lt;/p&gt;
+					
+					&lt;p&gt;
+					&lt;input name=&quot;reset_btn&quot; type=&quot;reset&quot; value=&quot;Poni&scaron;ti&quot;&gt;
+					&lt;input name=&quot;submit_btn&quot; type=&quot;submit&quot; value=&quot;Prijavi se&quot;&gt;
+					&lt;/p&gt;
+					
+					
+					&lt;/form&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div
+          id="tex"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
           <div class="uk-width-1-1@l">
             <div class="uk-card uk-card-default uk-card">
               <div class="uk-card-header">
@@ -3381,7 +3775,7 @@ height=&quot;404&quot;&gt;&lt;/video&gt;
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <footer class="uk-section uk-section-small uk-text-center">
           <hr />
           <p class="uk-text-small uk-text-center">Algebra predavanja 2019</p>
@@ -3453,7 +3847,12 @@ height=&quot;404&quot;&gt;&lt;/video&gt;
 				<li><a uk-scroll title="Tablice zadatak 3" href="#tabliceZadatak-3">Zadatak 3</a></li>
 			</ul>
 			</li>
-              <li><a uk-scroll title="Obrasci" href="#">Obrasci</a></li>
+			  <li><a uk-scroll title="Obrasci" href="#obrasci">Obrasci</a>
+				<ul class="uk-nav-sub">
+					<li><a uk-scroll title="Obrasci Lekcija" href="#obrasci">Lekcija</a></li>
+					<li><a uk-scroll title="Obrasci zadatak" href="#obrasciZadatak">Zadatak</a></li>
+				</ul>
+			</li>
               <li>
                 <a uk-scroll title="Strukturiranje sadržaja" href="#"
                   >Strukturiranje sadržaja</a
