@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Algebra</title>
+    <!-- CSS FILES -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Algebra</title>
-	<!-- CSS FILES -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css">
-	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
-	<style type="text/css">
-		.viewport-height {
-			height: 100vh;
-		}
-	</style>
-</head>
-
-<body>
-
-	<!--HEADER-->
-	<header id="top-head" class="uk-position-fixed">
-		<div class="uk-container uk-container-expand uk-background-primary">
-			<nav class="uk-navbar uk-light" data-uk-navbar="mode:click; duration: 250">
-				<div class="uk-navbar-left">
-					<!-- <ul class="uk-navbar-nav uk-visible@m">
+  <body>
+    <!--HEADER-->
+    <header id="top-head" class="uk-position-fixed">
+      <div class="uk-container uk-container-expand uk-background-primary">
+        <nav
+          class="uk-navbar uk-light"
+          data-uk-navbar="mode:click; duration: 250"
+        >
+          <div class="uk-navbar-left">
+            <!-- <ul class="uk-navbar-nav uk-visible@m">
 						<li>
 							<a href="#">Settings <span data-uk-icon="icon: triangle-down"></span></a>
 							<div class="uk-navbar-dropdown">
@@ -39,23 +39,37 @@
 							</div>
 						</li>
 					</ul> -->
-				</div>
-				<div class="uk-navbar-right">
-					<ul class="uk-navbar-nav">
-						<li><span data-uk-icon="icon:user" title="Your profile" data-uk-tooltip></span></li>
-						<!-- <li><a href="#" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a></li>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li>
+                <span
+                  data-uk-icon="icon:user"
+                  title="Your profile"
+                  data-uk-tooltip
+                ></span>
+              </li>
+              <!-- <li><a href="#" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a></li>
 						<li><a href="#" data-uk-icon="icon:  sign-out" title="Sign Out" data-uk-tooltip></a></li> -->
-						<li class=" uk-hidden@m"><a class="uk-navbar-toggle" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"
-								title="Offcanvas" data-uk-tooltip></a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--/HEADER-->
-	<!-- LEFT BAR -->
-	<aside id="left-col" class="uk-light uk-visible@m">
-		<!-- <div class="left-content-box  content-box-dark">
+              <li class=" uk-hidden@m">
+                <a
+                  class="uk-navbar-toggle"
+                  data-uk-toggle
+                  data-uk-navbar-toggle-icon
+                  href="#offcanvas-nav"
+                  title="Offcanvas"
+                  data-uk-tooltip
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--/HEADER-->
+    <!-- LEFT BAR -->
+    <aside id="left-col" class="uk-light uk-visible@m">
+      <!-- <div class="left-content-box  content-box-dark">
 				
 				<div class="uk-position-relative uk-text-center uk-display-block">
 				    <div class="uk-dropdown user-drop" data-uk-dropdown="mode: click; pos: bottom-center; animation: uk-animation-slide-bottom-small; duration: 150">
@@ -72,47 +86,72 @@
 				</div>
 			</div> -->
 
-		<div class="left-nav-wrap">
-			<ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
-				<li class="uk-nav-header">Lekcije</li>
-				<li class="uk-parent">
-					<a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>HTML</a>
-					<ul class="uk-nav-sub">
-						<li><a title="Uvod" href="#">Uvod</a></li>
-						<li><a title="Text" href="#">Text</a>
-							<ul class="uk-nav-sub">
-								<li><a title="text-1" href="#text-1">01</a></li>
-								<li><a title="text-2" href="#text-2">02</a></li>
-								<li><a title="text-3" href="#text-3">03</a></li>
-							</ul>
-						</li>
-						<li><a title="Liste" href="#liste">Liste</a></li>
-						<li><a title="Grafika" href="#">Grafika</a></li>
-						<li><a title="Audio/Video" href="#">Audio/Video</a></li>
-						<li><a title="Linkovi" href="#">Linkovi</a></li>
-						<li><a title="Tablice" href="#">Tablice</a></li>
-						<li><a title="Obrasci" href="#">Obrasci</a></li>
-						<li><a title="Strukturiranje sadržaja" href="#">Strukturiranje sadržaja</a></li>
-					</ul>
-				</li>
-				<hr>
-				<li class="uk-parent uk-disabled" title="Why U touching me????">
-					<a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>CSS</a>
-					<ul class="uk-nav-sub">
-						<li><a href="#">Sub item</a></li>
-						<li><a href="#">Sub item</a></li>
-					</ul>
-				</li>
-			</ul>
-
-		</div>
-		<div class="bar-bottom">
-			<ul class="uk-subnav uk-flex uk-flex-center uk-child-width-1-5" data-uk-grid>
-				<li>
-					<a href="https://igor-apfentaler.from.hr/" class="uk-icon-link" data-uk-icon="icon: home"
-						title="Igor Apfentaler" data-uk-tooltip></a>
-				</li>
-				<!-- <li>
+      <div class="left-nav-wrap">
+        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+          <li class="uk-nav-header">Lekcije</li>
+          <li class="uk-parent">
+            <a href="#"
+              ><span
+                data-uk-icon="icon: thumbnails"
+                class="uk-margin-small-right"
+              ></span
+              >HTML</a
+            >
+            <ul class="uk-nav-sub">
+              <li><a title="Uvod" href="#uvod">Uvod</a></li>
+              <li>
+                <a title="Text" href="#">Text</a>
+                <ul class="uk-nav-sub">
+                  <li><a title="text-1" href="#text-1">Lekcija 01</a></li>
+                  <li><a title="text-2" href="#text-2">Lekcija 02</a></li>
+                  <li><a title="text-3" href="#text-3">Lekcija 03</a></li>
+                  <li><a title="text-4" href="#text-4">Lekcija 04</a></li>
+                </ul>
+              </li>
+              <li><a title="Liste" href="#liste">Liste</a></li>
+              <li><a title="Grafika" href="#">Grafika</a></li>
+              <li><a title="Audio/Video" href="#">Audio/Video</a></li>
+              <li><a title="Linkovi" href="#">Linkovi</a></li>
+              <li><a title="Tablice" href="#">Tablice</a></li>
+              <li><a title="Obrasci" href="#">Obrasci</a></li>
+              <li>
+                <a title="Strukturiranje sadržaja" href="#"
+                  >Strukturiranje sadržaja</a
+                >
+              </li>
+            </ul>
+          </li>
+          <hr />
+          <li class="uk-parent uk-disabled" title="Why U touching me????">
+            <a href="#"
+              ><span
+                data-uk-icon="icon: comments"
+                class="uk-margin-small-right"
+              ></span
+              >CSS</a
+            >
+            <ul class="uk-nav-sub">
+              <li><a href="#">Sub item</a></li>
+              <li><a href="#">Sub item</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="bar-bottom">
+        <ul
+          class="uk-subnav uk-flex uk-flex-center uk-child-width-1-5"
+          data-uk-grid
+        >
+          <li>
+            <a
+              href="https://igor-apfentaler.from.hr/"
+              class="uk-icon-link"
+              data-uk-icon="icon: home"
+              title="Igor Apfentaler"
+              data-uk-tooltip
+            ></a>
+          </li>
+          <!-- <li>
 						<a href="#" class="uk-icon-link" data-uk-icon="icon: settings" title="Settings" data-uk-tooltip></a>
 					</li>
 					<li>
@@ -122,254 +161,485 @@
 					<li>
 						<a href="#" class="uk-icon-link" data-uk-tooltip="Sign out" data-uk-icon="icon: sign-out"></a>
 					</li> -->
-			</ul>
-		</div>
-	</aside>
-	<!-- /LEFT BAR -->
-	<!-- CONTENT -->
-	<div id="content" data-uk-height-viewport="expand: true">
-		<div class="uk-container uk-container-expand ">
-			<div id="text" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
+        </ul>
+      </div>
+    </aside>
+    <!-- /LEFT BAR -->
+    <!-- CONTENT -->
+    <div id="content" data-uk-height-viewport="expand: true">
+      <div class="uk-container uk-container-expand ">
+        <div
+          id="uvod"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Uvod</h4>
+                  </div>
+                  <p>Struktura HTML-a (HTML5 Boilerplate)</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #uvodTab; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Markup</a></li>
+                </ul>
+                <ul id="uvodTab" class="uk-switcher uk-margin">
+                  <li>
+                    <pre>
+	<code>
+		&lt;!DOCTYPE html&gt;
+		&lt;html lang=&quot;en&quot;&gt;
+			&lt;head&gt;
+				&lt;meta charset=&quot;UTF-8&quot;&gt;
+				&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+				&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+				&lt;meta name=&quot;description&quot; content=&quot;opis sadržaja stranice&quot;&gt;
+				&lt;meta name=&quot;author&quot; content=&quot;ime autora stranice&quot;&gt;
+				&lt;title&gt;Document&lt;/title&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+			
+			&lt;/body&gt;
+		&lt;/html&gt;
+	</code>
+</pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<!-- panel -->
-				<div class="uk-width-1-1@l">
-					<div class="uk-card uk-card-default uk-card">
-						<div class="uk-card-header">
-							<div class="uk-grid uk-grid-small">
-								<div class="uk-width-auto">
-									<h4>Text</h4>
-								</div>
-								<p>Lekcija 01</p>
-							</div>
-						</div>
-						<div class="uk-card-body">
-							<ul uk-tab uk-switcher="connect: #test; animation: uk-animation-fade;">
-								<li class="uk-active"><a href="#">Preview</a></li>
-								<li><a href="#">Markup</a></li>
-							</ul>
-							<ul id="test" class="uk-switcher uk-margin">
-								<li>
-									<h1>Naslov 1. razine</h1>
-									<h2>Naslov 2. razine</h2>
-									<h3>Naslov 3. razine</h3>
-									<h4>Naslov 4. razine</h4>
-									<h5>Naslov 5. razine</h5>
-									<h6>Naslov 6. razine</h6>
-								</li>
-								<li>
-									<pre><code>
-	&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
-	&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
-	&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
-	&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
-	&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
-	&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
-</code></pre>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="text-1" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
+        <div
+          id="text-1"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Text</h4>
+                  </div>
+                  <p>Lekcija 1</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #textTab-2; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="textTab-2" class="uk-switcher uk-margin">
+                  <li>
+                    <!-- paragrafi, novi red, unaprijed oblikovani tekst -->
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Ullam inventore enim cupiditate nostrum odio fuga delectus
+                      consequatur quibusdam doloribus optio distinctio dicta,
+                      dolor at exercitationem tempora corporis ut? Accusamus,
+                      ratione!
+                    </p>
+                    <p>
+                      Iusto molestiae nam dicta minus, deserunt facilis ipsum
+                      tempora distinctio, quisquam dolor nesciunt aliquam
+                      repellat! Possimus rem consequuntur saepe fugiat neque.
+                      Explicabo suscipit fugit atque necessitatibus cupiditate
+                      officiis ipsa laudantium?
+                    </p>
+                    <p>
+                      Magni nisi sed est laborum, illum quia. Corporis quos
+                      perferendis deserunt quidem assumenda officiis nulla quia
+                      laborum eius! Quidem cumque maiores illo a libero, vero
+                      porro ipsam perferendis explicabo et!
+                    </p>
+                    <p>
+                      Neque tenetur tempora aliquid doloremque, vitae minima
+                      consequuntur amet accusamus officia illum unde labore
+                      quod, nisi quas saepe quasi harum necessitatibus eaque
+                      perferendis accusantium error voluptatem veritatis itaque
+                      fugit? Voluptates.
+                    </p>
+                    <p>
+                      Et amet, corrupti sequi eius inventore ab necessitatibus
+                      at voluptates <br />> Nam quia inventore perferendis
+                      libero voluptates!<br />
+                      Necessitatibus, qui pariatur doloremque<br />
+                      iure possimus temporibus velit corrupti error dolor
+                      deserunt eveniet.
+                    </p>
 
-				<!-- panel -->
-				<div class="uk-width-1-2@l">
-					<div class="uk-card uk-card-default uk-card">
-						<div class="uk-card-header">
-							<div class="uk-grid uk-grid-small">
-								<div class="uk-width-auto">
-									<h4>Sales Chart</h4>
-								</div>
-								<p>Preview</p>
-							</div>
-						</div>
-						<div class="uk-card-body">
-							<h1>Naslov 1. razine</h1>
-							<h2>Naslov 2. razine</h2>
-							<h3>Naslov 3. razine</h3>
-							<h4>Naslov 4. razine</h4>
-							<h5>Naslov 5. razine</h5>
-							<h6>Naslov 6. razine</h6>
-						</div>
-					</div>
-				</div>
-				<!-- /panel -->
-				<!-- panel -->
-				<div class="uk-width-1-2@l">
-					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-						<div class="uk-card-header">
-							<div class="uk-grid uk-grid-small">
-								<div class="uk-width-auto">
-									<h4>Predictions Chart</h4>
-								</div>
-								<p>Markup</p>
-							</div>
-						</div>
-						<div class="uk-card-body">
-							<pre><code>
-									&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
-									&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
-									&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
-									&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
-									&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
-									&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
-								</code></pre>
-						</div>
-					</div>
-				</div>
-				<!-- /panel -->
-			</div>
-			<div id="text-2" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
+                    <pre>
+		Lorem ipsum 
+							        dolor sit amet      consectetur adipisicing elit. 
+							                       Explicabo totam possimus optio repellat quis, 
+							                       
+							                       
+							            sed repellendus laborum. 
+							    Dignissimos, laudantium iste quaerat voluptatem repudiandae est, 
+							    
+							                                     voluptates incidunt maxime, 
+							                                     
+							            in quo vitae.</pre
+                    >
+                  </li>
+                  <li>
+                    <pre><code>
+			&lt;!-- paragrafi, novi red, unaprijed oblikovani tekst --&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam inventore enim cupiditate nostrum odio fuga
+			delectus consequatur quibusdam doloribus optio distinctio dicta, dolor at exercitationem tempora corporis ut?
+			Accusamus, ratione!&lt;/p&gt;
+			&lt;p&gt;Iusto molestiae nam dicta minus, deserunt facilis ipsum tempora distinctio, quisquam dolor nesciunt aliquam
+			repellat! Possimus rem consequuntur saepe fugiat neque. Explicabo suscipit fugit atque necessitatibus cupiditate
+			officiis ipsa laudantium?&lt;/p&gt;
+			&lt;p&gt;Magni nisi sed est laborum, illum quia. Corporis quos perferendis deserunt quidem assumenda officiis nulla quia
+			laborum eius! Quidem cumque maiores illo a libero, vero porro ipsam perferendis explicabo et!&lt;/p&gt;
+			&lt;p&gt;Neque tenetur tempora aliquid doloremque, vitae minima consequuntur amet accusamus officia illum unde labore
+			quod, nisi quas saepe quasi harum necessitatibus eaque perferendis accusantium error voluptatem veritatis itaque
+			fugit? Voluptates.&lt;/p&gt;
+			&lt;p&gt;Et amet, corrupti sequi eius inventore ab necessitatibus at voluptates &lt;br&gt;&gt;
+			Nam quia inventore perferendis libero voluptates!&lt;br&gt;
+			Necessitatibus, qui pariatur doloremque&lt;br&gt;
+			iure possimus temporibus velit corrupti error dolor deserunt eveniet.&lt;/p&gt;
+			
+			&lt;pre&gt;Lorem ipsum
+			dolor sit amet consectetur adipisicing elit.
+			Explicabo totam possimus optio repellat quis,
+			
+			
+			sed repellendus laborum.
+			Dignissimos, laudantium iste quaerat voluptatem repudiandae est,
+			
+			voluptates incidunt maxime,
+			
+			in quo vitae.&lt;/pre&gt;
+		</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="text-2"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Text</h4>
+                  </div>
+                  <p>Lekcija 02</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+                    <h1>Naslov 1. razine</h1>
+                    <h2>Naslov 2. razine</h2>
+                    <h3>Naslov 3. razine</h3>
+                    <h4>Naslov 4. razine</h4>
+                    <h5>Naslov 5. razine</h5>
+                    <h6>Naslov 6. razine</h6>
+                  </li>
+                  <li>
+                    <pre><code>
+			&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
+			&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
+			&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
+			&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
+			&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
+			&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
+		</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="text-3"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Text</h4>
+                  </div>
+                  <p>Lekcija 03</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+                    <!-- lang, title, atributi meta oznaka, hidden ... -->
+                    <p title="Lorem ipsum">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Deleniti unde temporibus eos rem cum, nemo natus autem
+                      culpa. Debitis eos accusantium obcaecati reiciendis in
+                      quod, molestiae architecto et tempore dolore.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Deleniti unde temporibus eos rem cum, nemo natus autem
+                      culpa. Debitis eos accusantium obcaecati reiciendis in
+                      quod, molestiae architecto et tempore dolore.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Deleniti unde temporibus eos rem cum, nemo natus autem
+                      culpa. Debitis eos accusantium obcaecati reiciendis in
+                      quod, molestiae architecto et tempore dolore.
+                    </p>
+                    <p lang="hr" title="Ovo je tekst na hrvatskom jeziku">
+                      Ovo je tekst na hrvatskom jeziku.
+                    </p>
+                    <p lang="en">This is a text in English</p>
+                    <p lang="de">Dies ist ein Text in Deutsch</p>
+                    <p lang="it">Questo è un testo in italiano</p>
+                    <p hidden>
+                      orem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatibus, nam. Quaerat doloremque quae deleniti id
+                      amet cum, eaque laboriosam pariatur impedit illum, dicta
+                      qui maiores veniam rem assumenda. Beatae, tenetur?
+                    </p>
+                  </li>
+                  <li>
+                    <pre><code>
+			&lt;!-- lang, title, atributi meta oznaka, hidden ... --&gt;
+			&lt;p title=&quot;Lorem ipsum&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti unde
+			temporibus eos rem cum, nemo natus autem culpa. Debitis eos accusantium obcaecati reiciendis in quod, molestiae
+			architecto et tempore dolore.&lt;/p&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti unde temporibus eos rem cum, nemo natus
+			autem culpa. Debitis eos accusantium obcaecati reiciendis in quod, molestiae architecto et tempore dolore.&lt;/p&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti unde temporibus eos rem cum, nemo natus
+			autem culpa. Debitis eos accusantium obcaecati reiciendis in quod, molestiae architecto et tempore dolore.&lt;/p&gt;
+			&lt;p lang=&quot;hr&quot; title=&quot;Ovo je tekst na hrvatskom jeziku&quot;&gt;Ovo je tekst na hrvatskom
+			jeziku.&lt;/p&gt;
+			&lt;p lang=&quot;en&quot;&gt;This is a text in English&lt;/p&gt;
+			&lt;p lang=&quot;de&quot;&gt;Dies ist ein Text in Deutsch&lt;/p&gt;
+			&lt;p lang=&quot;it&quot;&gt;Questo &egrave; un testo in italiano&lt;/p&gt;
+			&lt;p hidden&gt;orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nam. Quaerat doloremque quae
+			deleniti id amet cum, eaque laboriosam pariatur impedit illum, dicta qui maiores veniam rem assumenda. Beatae,
+			tenetur?&lt;/p&gt;
+		</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="text-4"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Text</h4>
+                  </div>
+                  <p>Lekcija 4</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+                    <p><b>Lorem ipsum</b></p>
+                    <p><i>Lorem ipsum dolor</i></p>
+                    <p><strong>Lorem ipsum</strong></p>
+                    <p><em>Lorem ipsum dolor</em></p>
+                    <p><mark>Lorem ipsum</mark></p>
+                    <p>Lorem <small>ipsum dolor</small></p>
+                    <p>
+                      <del>Lorem ipsum dolor</del> <ins>Lorem ipsum dolor</ins>
+                    </p>
+                    <p>Lorem <sub>ipsum</sub>dolor</p>
+                    <p>Lorem <sup>ipsum</sup>dolor</p>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;p&gt;&lt;b&gt;Lorem ipsum&lt;/b&gt;&lt;/p&gt;
+					&lt;p&gt;&lt;i&gt;Lorem ipsum dolor&lt;/i&gt;&lt;/p&gt;
+					&lt;p&gt;&lt;strong&gt;Lorem ipsum&lt;/strong&gt;&lt;/p&gt;
+					&lt;p&gt;&lt;em&gt;Lorem ipsum dolor&lt;/em&gt;&lt;/p&gt;
+					&lt;p&gt;&lt;mark&gt;Lorem ipsum&lt;/mark&gt;&lt;/p&gt;
+					&lt;p&gt;Lorem &lt;small&gt;ipsum dolor&lt;/small&gt;&lt;/p&gt;
+					&lt;p&gt;&lt;del&gt;Lorem ipsum dolor&lt;/del&gt; &lt;ins&gt;Lorem ipsum dolor&lt;/ins&gt;&lt;/p&gt;
+					&lt;p&gt;Lorem &lt;sub&gt;ipsum&lt;/sub&gt;dolor&lt;/p&gt;
+					&lt;p&gt;Lorem &lt;sup&gt;ipsum&lt;/sup&gt;dolor&lt;/p&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="tex"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Text</h4>
+                  </div>
+                  <p>Lekcija 02</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+                    <h1>Naslov 1. razine</h1>
+                    <h2>Naslov 2. razine</h2>
+                    <h3>Naslov 3. razine</h3>
+                    <h4>Naslov 4. razine</h4>
+                    <h5>Naslov 5. razine</h5>
+                    <h6>Naslov 6. razine</h6>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
+					&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
+					&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
+					&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
+					&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
+					&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="uk-section uk-section-small uk-text-center">
+          <hr />
+          <p class="uk-text-small uk-text-center">Algebra predavanja 2019</p>
+        </footer>
+      </div>
+    </div>
+    <!-- /CONTENT -->
+    <!-- OFFCANVAS -->
+    <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+      <div
+        class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide"
+      >
+        <button
+          class="uk-offcanvas-close uk-close uk-icon"
+          type="button"
+          data-uk-close
+        ></button>
+        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+          <li class="uk-nav-header">Lekcije</li>
+          <li class="uk-parent">
+            <a href="#"
+              ><span
+                data-uk-icon="icon: thumbnails"
+                class="uk-margin-small-right"
+              ></span
+              >HTML</a
+            >
+            <ul class="uk-nav-sub">
+              <li><a title="Uvod" href="#">Uvod</a></li>
+              <li>
+                <a title="Text" href="#">Text</a>
+                <ul class="uk-nav-sub">
+                  <li><a title="text-1" href="#text-1">01</a></li>
+                  <li><a title="text-2" href="#text-2">02</a></li>
+                  <li><a title="text-3" href="#text-3">03</a></li>
+                </ul>
+              </li>
+              <li><a title="Liste" href="#liste">Liste</a></li>
+              <li><a title="Grafika" href="#">Grafika</a></li>
+              <li><a title="Audio/Video" href="#">Audio/Video</a></li>
+              <li><a title="Linkovi" href="#">Linkovi</a></li>
+              <li><a title="Tablice" href="#">Tablice</a></li>
+              <li><a title="Obrasci" href="#">Obrasci</a></li>
+              <li>
+                <a title="Strukturiranje sadržaja" href="#"
+                  >Strukturiranje sadržaja</a
+                >
+              </li>
+            </ul>
+          </li>
+          <hr />
+          <li class="uk-parent uk-disabled" title="Why U touching me????">
+            <a href="#"
+              ><span
+                data-uk-icon="icon: comments"
+                class="uk-margin-small-right"
+              ></span
+              >CSS</a
+            >
+            <ul class="uk-nav-sub">
+              <li><a href="#">Sub item</a></li>
+              <li><a href="#">Sub item</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /OFFCANVAS -->
 
-				<!-- panel -->
-				<div class="uk-width-1-2@l">
-					<div class="uk-card uk-card-default uk-card">
-						<div class="uk-card-header">
-							<div class="uk-grid uk-grid-small">
-								<div class="uk-width-auto">
-									<h4>Sales Chart</h4>
-								</div>
-								<p>Preview</p>
-							</div>
-						</div>
-						<div class="uk-card-body">
-							<h1>Naslov 1. razine</h1>
-							<h2>Naslov 2. razine</h2>
-							<h3>Naslov 3. razine</h3>
-							<h4>Naslov 4. razine</h4>
-							<h5>Naslov 5. razine</h5>
-							<h6>Naslov 6. razine</h6>
-						</div>
-					</div>
-				</div>
-				<!-- /panel -->
-				<!-- panel -->
-				<div class="uk-width-1-2@l">
-					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-						<div class="uk-card-header">
-							<div class="uk-grid uk-grid-small">
-								<div class="uk-width-auto">
-									<h4>Predictions Chart</h4>
-								</div>
-								<p>Markup</p>
-							</div>
-						</div>
-						<div class="uk-card-body">
-							<pre><code>
-									&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
-									&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
-									&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
-									&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
-									&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
-									&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
-								</code></pre>
-						</div>
-					</div>
-				</div>
-				<!-- /panel -->
-			</div>
-			<div id="text-3" class="uk-grid uk-grid-medium viewport-height" data-uk-grid>
-
-				<!-- panel -->
-				<div class="uk-width-1-2@l">
-					<div class="uk-card uk-card-default uk-card">
-						<div class="uk-card-header">
-							<div class="uk-grid uk-grid-small">
-								<div class="uk-width-auto">
-									<h4>Sales Chart</h4>
-								</div>
-								<p>Preview</p>
-							</div>
-						</div>
-						<div class="uk-card-body">
-							<h1>Naslov 1. razine</h1>
-							<h2>Naslov 2. razine</h2>
-							<h3>Naslov 3. razine</h3>
-							<h4>Naslov 4. razine</h4>
-							<h5>Naslov 5. razine</h5>
-							<h6>Naslov 6. razine</h6>
-						</div>
-					</div>
-				</div>
-				<!-- /panel -->
-				<!-- panel -->
-				<div class="uk-width-1-2@l">
-					<div class="uk-card uk-card-default uk-card-small uk-card-hover">
-						<div class="uk-card-header">
-							<div class="uk-grid uk-grid-small">
-								<div class="uk-width-auto">
-									<h4>Predictions Chart</h4>
-								</div>
-								<p>Markup</p>
-							</div>
-						</div>
-						<div class="uk-card-body">
-							<pre><code>
-									&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
-									&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
-									&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
-									&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
-									&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
-									&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
-								</code></pre>
-						</div>
-					</div>
-				</div>
-				<!-- /panel -->
-			</div>
-			<footer class="uk-section uk-section-small uk-text-center">
-				<hr>
-				<p class="uk-text-small uk-text-center">Algebra predavanja 2019 </p>
-			</footer>
-		</div>
-
-	</div>
-	<!-- /CONTENT -->
-	<!-- OFFCANVAS -->
-	<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
-		<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
-			<button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
-			<ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
-				<li class="uk-nav-header">Lekcije</li>
-				<li class="uk-parent">
-					<a href="#"><span data-uk-icon="icon: thumbnails" class="uk-margin-small-right"></span>HTML</a>
-					<ul class="uk-nav-sub">
-						<li><a title="Uvod" href="#">Uvod</a></li>
-						<li><a title="Text" href="#">Text</a>
-							<ul class="uk-nav-sub">
-								<li><a title="text-1" href="#text-1">01</a></li>
-								<li><a title="text-2" href="#text-2">02</a></li>
-								<li><a title="text-3" href="#text-3">03</a></li>
-							</ul>
-						</li>
-						<li><a title="Liste" href="#liste">Liste</a></li>
-						<li><a title="Grafika" href="#">Grafika</a></li>
-						<li><a title="Audio/Video" href="#">Audio/Video</a></li>
-						<li><a title="Linkovi" href="#">Linkovi</a></li>
-						<li><a title="Tablice" href="#">Tablice</a></li>
-						<li><a title="Obrasci" href="#">Obrasci</a></li>
-						<li><a title="Strukturiranje sadržaja" href="#">Strukturiranje sadržaja</a></li>
-					</ul>
-				</li>
-				<hr>
-				<li class="uk-parent uk-disabled" title="Why U touching me????">
-					<a href="#"><span data-uk-icon="icon: comments" class="uk-margin-small-right"></span>CSS</a>
-					<ul class="uk-nav-sub">
-						<li><a href="#">Sub item</a></li>
-						<li><a href="#">Sub item</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<!-- /OFFCANVAS -->
-
-	<!-- JS FILES -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-	<script src="js/chartScripts.js"></script>
-</body>
-
+    <!-- JS FILES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="js/chartScripts.js"></script>
+  </body>
 </html>
