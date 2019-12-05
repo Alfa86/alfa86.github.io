@@ -126,7 +126,14 @@
 				<li><a uk-scroll title="Linkovi zadatak" href="#linkoviZadatak">Zadatak</a></li>
 			</ul>
 		</li>
-              <li><a uk-scroll title="Tablice" href="#">Tablice</a></li>
+			  <a uk-scroll title="Tablice" href="#tablice">Tablice</a>
+				<ul class="uk-nav-sub">
+			<li><a uk-scroll title="Tablice" href="#tablice">Lekcija</a></li>
+			<li><a uk-scroll title="Tablice zadatak 1" href="#tabliceZadatak-1">Zadatak 1</a></li>
+			<li><a uk-scroll title="Tablice zadatak 2" href="#tabliceZadatak-2">Zadatak 2</a></li>
+			<li><a uk-scroll title="Tablice zadatak 3" href="#tabliceZadatak-3">Zadatak 3</a></li>
+			</ul>
+			</li>
               <li><a uk-scroll title="Obrasci" href="#">Obrasci</a></li>
               <li>
                 <a title="Strukturiranje sadržaja" href="#"
@@ -2616,6 +2623,710 @@ height=&quot;404&quot;&gt;&lt;/video&gt;
 					alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
 					&lt;/p&gt;
 					&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Povratak na vrh stranice&lt;/a&gt;&lt;/p&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="tablice"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Tablice</h4>
+                  </div>
+                  <p>Lekcija</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<!-- Polaznici još ne znaju CSS, stiliziranje tablice samo informativno   -->
+					<table style="border:1px solid #333">
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+						</tr>
+					</table>
+					<hr>
+					<!-- U primjerima ispod atribut border je korišten samo da bi se vidjele tablice tj, ćelije. Polaznicima napomenuti da se taj atribut ne koristi u HTML5 standardu -->
+					<table border="1">
+						<caption>Rezultati završnog ispita</caption>
+						<tr>
+							<th>Redni broj</th>
+							<th>Ime</th>
+							<th>Prezime</th>
+							<th>Zanimanje</th>
+							<th>Broj osvojenih bodova<br>na ispitu</th>
+						</tr>
+						<tr>
+							<td>1.</td>
+							<td>Maja</td>
+							<td>Majić</td>
+							<td>web dizajnerica</td>
+							<td>98</td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Pero</td>
+							<td>Perić</td>
+							<td>poštar</td>
+							<td>82</td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Ana</td>
+							<td>Aničić</td>
+							<td>nastavnica</td>
+							<td>76</td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>Mirko</td>
+							<td>Mirkovski</td>
+							<td>saborski zastupnik u mirovni</td>
+							<td>75</td>
+						</tr>
+						<tr>
+							<td>5.</td>
+							<td>Ivan</td>
+							<td>Ivančević</td>
+							<td>student</td>
+							<td>74</td>
+						</tr>
+					</table>
+					<hr>
+					<table border="1">
+						<thead>
+							<tr>
+								<th>Namirnica</th>
+								<th>Količina</th>
+								<th>Predviđena potrošnja</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Trešnje</td>
+								<td>5kg</td>
+								<td>100kn</td>
+							</tr>
+							<tr>
+								<td>Breskve</td>
+								<td>2kg</td>
+								<td>20kn</td>
+							</tr>
+							<tr>
+								<td>Marelice</td>
+								<td>2kg</td>
+								<td>30kn</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>Ukupno:</td>
+								<td>9kg</td>
+								<td>150kn</td>
+							</tr>
+						</tfoot>
+					</table>
+					
+					<hr>
+					
+					<table border="1">
+						<tr>
+							<td colspan="3">red 1 ćelija 1</td>
+						</tr>
+						<tr>
+							<td>red 2 ćelija 4</td>
+							<td>red 2 ćelija 5</td>
+							<td>red 2 ćelija 6</td>
+						</tr>
+						<tr>
+							<td>red 3 ćelija 7</td>
+							<td colspan="2">red 3 ćelija 8</td>
+						</tr>
+					</table>
+					
+					<hr>
+					
+					<table border="1">
+						<tr>
+							<td rowspan="3">red 1 ćelija 1</td>
+							<td>red 1 ćelija 2</td>
+							<td>red 1 ćelija 3</td>
+						</tr>
+						<tr>
+							<td rowspan="2">red 2 ćelija 5</td>
+							<td>red 2 ćelija 6</td>
+						</tr>
+						<tr>
+							<td>red 3 ćelija 9</td>
+						</tr>
+					</table>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;!-- Polaznici jo&scaron; ne znaju CSS, stiliziranje tablice samo informativno --&gt;
+					&lt;table style=&quot;border:1px solid #333&quot;&gt;
+					&lt;tr&gt;
+					&lt;td&gt;1&lt;/td&gt;
+					&lt;td&gt;2&lt;/td&gt;
+					&lt;td&gt;3&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;td&gt;5&lt;/td&gt;
+					&lt;td&gt;6&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/table&gt;
+					&lt;hr&gt;
+					&lt;!-- U primjerima ispod atribut border je kori&scaron;ten samo da bi se vidjele tablice tj, ćelije. Polaznicima
+					napomenuti da se taj atribut ne koristi u HTML5 standardu --&gt;
+					&lt;table border=&quot;1&quot;&gt;
+					&lt;caption&gt;Rezultati zavr&scaron;nog ispita&lt;/caption&gt;
+					&lt;tr&gt;
+					&lt;th&gt;Redni broj&lt;/th&gt;
+					&lt;th&gt;Ime&lt;/th&gt;
+					&lt;th&gt;Prezime&lt;/th&gt;
+					&lt;th&gt;Zanimanje&lt;/th&gt;
+					&lt;th&gt;Broj osvojenih bodova&lt;br&gt;na ispitu&lt;/th&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;1.&lt;/td&gt;
+					&lt;td&gt;Maja&lt;/td&gt;
+					&lt;td&gt;Majić&lt;/td&gt;
+					&lt;td&gt;web dizajnerica&lt;/td&gt;
+					&lt;td&gt;98&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;2.&lt;/td&gt;
+					&lt;td&gt;Pero&lt;/td&gt;
+					&lt;td&gt;Perić&lt;/td&gt;
+					&lt;td&gt;po&scaron;tar&lt;/td&gt;
+					&lt;td&gt;82&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;3.&lt;/td&gt;
+					&lt;td&gt;Ana&lt;/td&gt;
+					&lt;td&gt;Aničić&lt;/td&gt;
+					&lt;td&gt;nastavnica&lt;/td&gt;
+					&lt;td&gt;76&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;4.&lt;/td&gt;
+					&lt;td&gt;Mirko&lt;/td&gt;
+					&lt;td&gt;Mirkovski&lt;/td&gt;
+					&lt;td&gt;saborski zastupnik u mirovni&lt;/td&gt;
+					&lt;td&gt;75&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;5.&lt;/td&gt;
+					&lt;td&gt;Ivan&lt;/td&gt;
+					&lt;td&gt;Ivančević&lt;/td&gt;
+					&lt;td&gt;student&lt;/td&gt;
+					&lt;td&gt;74&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/table&gt;
+					&lt;hr&gt;
+					&lt;table border=&quot;1&quot;&gt;
+					&lt;thead&gt;
+					&lt;tr&gt;
+					&lt;th&gt;Namirnica&lt;/th&gt;
+					&lt;th&gt;Količina&lt;/th&gt;
+					&lt;th&gt;Predviđena potro&scaron;nja&lt;/th&gt;
+					&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+					&lt;tr&gt;
+					&lt;td&gt;Tre&scaron;nje&lt;/td&gt;
+					&lt;td&gt;5kg&lt;/td&gt;
+					&lt;td&gt;100kn&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;Breskve&lt;/td&gt;
+					&lt;td&gt;2kg&lt;/td&gt;
+					&lt;td&gt;20kn&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;Marelice&lt;/td&gt;
+					&lt;td&gt;2kg&lt;/td&gt;
+					&lt;td&gt;30kn&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/tbody&gt;
+					&lt;tfoot&gt;
+					&lt;tr&gt;
+					&lt;td&gt;Ukupno:&lt;/td&gt;
+					&lt;td&gt;9kg&lt;/td&gt;
+					&lt;td&gt;150kn&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/tfoot&gt;
+					&lt;/table&gt;
+					
+					&lt;hr&gt;
+					
+					&lt;table border=&quot;1&quot;&gt;
+					&lt;tr&gt;
+					&lt;td colspan=&quot;3&quot;&gt;red 1 ćelija 1&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;red 2 ćelija 4&lt;/td&gt;
+					&lt;td&gt;red 2 ćelija 5&lt;/td&gt;
+					&lt;td&gt;red 2 ćelija 6&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;red 3 ćelija 7&lt;/td&gt;
+					&lt;td colspan=&quot;2&quot;&gt;red 3 ćelija 8&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/table&gt;
+					
+					&lt;hr&gt;
+					
+					&lt;table border=&quot;1&quot;&gt;
+					&lt;tr&gt;
+					&lt;td rowspan=&quot;3&quot;&gt;red 1 ćelija 1&lt;/td&gt;
+					&lt;td&gt;red 1 ćelija 2&lt;/td&gt;
+					&lt;td&gt;red 1 ćelija 3&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td rowspan=&quot;2&quot;&gt;red 2 ćelija 5&lt;/td&gt;
+					&lt;td&gt;red 2 ćelija 6&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;red 3 ćelija 9&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/table&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="tabliceZadatak-1"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Tablice</h4>
+                  </div>
+                  <p>Zadatak 1</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<table border="1">
+						<caption>Rezultati završnog ispita</caption>
+						<tr>
+							<th>Redni broj</th>
+							<th>Ime</th>
+							<th>Prezime</th>
+							<th>Zanimanje</th>
+							<th>Broj osvojenih bodova<br>na ispitu</th>
+						</tr>
+						<tr>
+							<th>1.</th>
+							<td>Maja</td>
+							<td>Majić</td>
+							<td>web dizajnerica</td>
+							<td>98</td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>Pero</td>
+							<td>Perić</td>
+							<td>poštar</td>
+							<td>82</td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>Ana</td>
+							<td>Aničić</td>
+							<td>nastavnica</td>
+							<td>76</td>
+						</tr>
+						<tr>
+							<th>4.</th>
+							<td>Mirko</td>
+							<td>Mirkovski</td>
+							<td>saborski zastupnik u mirovni</td>
+							<th>75</th>
+						</tr>
+						<tr>
+							<td>5.</td>
+							<td>Ivan</td>
+							<td>Ivančević</td>
+							<td>student</td>
+							<td>74</td>
+						</tr>
+					</table>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;table border=&quot;1&quot;&gt;
+					&lt;caption&gt;Rezultati zavr&scaron;nog ispita&lt;/caption&gt;
+					&lt;tr&gt;
+					&lt;th&gt;Redni broj&lt;/th&gt;
+					&lt;th&gt;Ime&lt;/th&gt;
+					&lt;th&gt;Prezime&lt;/th&gt;
+					&lt;th&gt;Zanimanje&lt;/th&gt;
+					&lt;th&gt;Broj osvojenih bodova&lt;br&gt;na ispitu&lt;/th&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;th&gt;1.&lt;/th&gt;
+					&lt;td&gt;Maja&lt;/td&gt;
+					&lt;td&gt;Majić&lt;/td&gt;
+					&lt;td&gt;web dizajnerica&lt;/td&gt;
+					&lt;td&gt;98&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;2.&lt;/td&gt;
+					&lt;td&gt;Pero&lt;/td&gt;
+					&lt;td&gt;Perić&lt;/td&gt;
+					&lt;td&gt;po&scaron;tar&lt;/td&gt;
+					&lt;td&gt;82&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;3.&lt;/td&gt;
+					&lt;td&gt;Ana&lt;/td&gt;
+					&lt;td&gt;Aničić&lt;/td&gt;
+					&lt;td&gt;nastavnica&lt;/td&gt;
+					&lt;td&gt;76&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;th&gt;4.&lt;/th&gt;
+					&lt;td&gt;Mirko&lt;/td&gt;
+					&lt;td&gt;Mirkovski&lt;/td&gt;
+					&lt;td&gt;saborski zastupnik u mirovni&lt;/td&gt;
+					&lt;th&gt;75&lt;/th&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;5.&lt;/td&gt;
+					&lt;td&gt;Ivan&lt;/td&gt;
+					&lt;td&gt;Ivančević&lt;/td&gt;
+					&lt;td&gt;student&lt;/td&gt;
+					&lt;td&gt;74&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/table&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="tabliceZadatak-2"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Tablice</h4>
+                  </div>
+                  <p>Zadatak 2</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<table border="1">
+						<caption>Web development team</caption>
+						<tr>
+							<th colspan="2">Project manager</th>
+							<th colspan="2">Project architect</th>
+							<th colspan="2">UI/UX designer</th>
+						</tr>
+						<tr>
+							<td colspan="2"><img src="multimedia/images/ljudi/lica/svg/ana.svg" alt="Project manager"></td>
+							<td colspan="2"><img src="multimedia/images/ljudi/lica/svg/ivana.svg" alt="Project architect"></td>
+							<td colspan="2"><img src="multimedia/images/ljudi/lica/svg/ivan.svg" alt="UI/UX designer"></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime quis. Eius ipsa maiores error
+									cum fuga tempora perspiciatis rerum molestias tempore magni accusantium, quasi dolore repellat
+									culpa, nulla harum.</p>
+							</td>
+							<td colspan="2">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime quis. Eius ipsa maiores error
+									cum fuga tempora perspiciatis rerum molestias tempore magni accusantium, quasi dolore repellat
+									culpa, nulla harum.</p>
+							</td>
+							<td colspan="2">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime quis. Eius ipsa maiores error
+									cum fuga tempora perspiciatis rerum molestias tempore magni accusantium, quasi dolore repellat
+									culpa, nulla harum.</p>
+							</td>
+						</tr>
+					
+						<tr>
+							<th colspan="3">Web developers</th>
+							<th colspan="3">QA and testing specialists</th>
+						</tr>
+						<tr>
+							<td><img src="multimedia/images/ljudi/lica/svg/mirko.svg" alt="Web developer"></td>
+							<td><img src="multimedia/images/ljudi/lica/svg/maja.svg" alt="Web developer"></td>
+							<td><img src="multimedia/images/ljudi/lica/svg/anja.svg" alt="Web developer"></td>
+							<td><img src="multimedia/images/ljudi/lica/svg/slavko.svg" alt="QA and testing specialist"></td>
+							<td><img src="multimedia/images/ljudi/lica/svg/pero.svg" alt="QA and testing specialist"></td>
+							<td><img src="multimedia/images/ljudi/lica/svg/slavica.svg" alt="QA and testing specialist"></td>
+						</tr>
+						<tr>
+							<td>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+									expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+									eum magni praesentium, iste ex.</p>
+							</td>
+							<td>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+									expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+									eum magni praesentium, iste ex.</p>
+							</td>
+							<td>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+									expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+									eum magni praesentium, iste ex.</p>
+							</td>
+							<td>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+									expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+									eum magni praesentium, iste ex.</p>
+							</td>
+							<td>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+									expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+									eum magni praesentium, iste ex.</p>
+							</td>
+							<td>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+									expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+									eum magni praesentium, iste ex.</p>
+							</td>
+						</tr>
+					
+					
+					</table>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;table border=&quot;1&quot;&gt;
+					&lt;caption&gt;Web development team&lt;/caption&gt;
+					&lt;tr&gt;
+					&lt;th colspan=&quot;2&quot;&gt;Project manager&lt;/th&gt;
+					&lt;th colspan=&quot;2&quot;&gt;Project architect&lt;/th&gt;
+					&lt;th colspan=&quot;2&quot;&gt;UI/UX designer&lt;/th&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td colspan=&quot;2&quot;&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/ana.svg&quot;
+					alt=&quot;Project manager&quot;&gt;&lt;/td&gt;
+					&lt;td colspan=&quot;2&quot;&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/ivana.svg&quot;
+					alt=&quot;Project architect&quot;&gt;&lt;/td&gt;
+					&lt;td colspan=&quot;2&quot;&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/ivan.svg&quot;
+					alt=&quot;UI/UX designer&quot;&gt;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td colspan=&quot;2&quot;&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime quis. Eius ipsa maiores error
+					cum fuga tempora perspiciatis rerum molestias tempore magni accusantium, quasi dolore repellat
+					culpa, nulla harum.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;td colspan=&quot;2&quot;&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime quis. Eius ipsa maiores error
+					cum fuga tempora perspiciatis rerum molestias tempore magni accusantium, quasi dolore repellat
+					culpa, nulla harum.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;td colspan=&quot;2&quot;&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, maxime quis. Eius ipsa maiores error
+					cum fuga tempora perspiciatis rerum molestias tempore magni accusantium, quasi dolore repellat
+					culpa, nulla harum.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;/tr&gt;
+					
+					&lt;tr&gt;
+					&lt;th colspan=&quot;3&quot;&gt;Web developers&lt;/th&gt;
+					&lt;th colspan=&quot;3&quot;&gt;QA and testing specialists&lt;/th&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/mirko.svg&quot; alt=&quot;Web
+					developer&quot;&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/maja.svg&quot; alt=&quot;Web
+					developer&quot;&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/anja.svg&quot; alt=&quot;Web
+					developer&quot;&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/slavko.svg&quot; alt=&quot;QA and testing
+					specialist&quot;&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/pero.svg&quot; alt=&quot;QA and testing
+					specialist&quot;&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;img src=&quot;../../../multimedia/images/ljudi/lica/svg/slavica.svg&quot; alt=&quot;QA and testing
+					specialist&quot;&gt;&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+					expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+					eum magni praesentium, iste ex.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+					expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+					eum magni praesentium, iste ex.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+					expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+					eum magni praesentium, iste ex.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+					expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+					eum magni praesentium, iste ex.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+					expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+					eum magni praesentium, iste ex.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+					&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quidem doloremque tenetur impedit! Ad
+					expedita officiis dolores beatae, dignissimos, minima cupiditate deserunt totam explicabo accusamus
+					eum magni praesentium, iste ex.&lt;/p&gt;
+					&lt;/td&gt;
+					&lt;/tr&gt;
+					
+					
+					&lt;/table&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="tabliceZadatak-3"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <!-- panel -->
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Text</h4>
+                  </div>
+                  <p>Lekcija 02</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<table border="1">
+						<tbody>
+							<tr>
+								<td colspan="4" rowspan="2">a</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td rowspan="3">22</td>
+							</tr>
+							<tr>
+								<td colspan="3">g</td>
+								<td rowspan="2">1</td>
+							</tr>
+							<tr>
+								<td rowspan="2">c</td>
+								<td colspan="2">h</td>
+							</tr>
+							<tr>
+								<td>J</td>
+								<td>N</td>
+								<td>B</td>
+								<td>D</td>
+							</tr>
+						</tbody>
+					</table>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;table border=&quot;1&quot;&gt;
+					&lt;tbody&gt;
+					&lt;tr&gt;
+					&lt;td colspan=&quot;4&quot; rowspan=&quot;2&quot;&gt;a&lt;/td&gt;
+					&lt;td&gt;4&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td rowspan=&quot;3&quot;&gt;22&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td colspan=&quot;3&quot;&gt;g&lt;/td&gt;
+					&lt;td rowspan=&quot;2&quot;&gt;1&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td rowspan=&quot;2&quot;&gt;c&lt;/td&gt;
+					&lt;td colspan=&quot;2&quot;&gt;h&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+					&lt;td&gt;J&lt;/td&gt;
+					&lt;td&gt;N&lt;/td&gt;
+					&lt;td&gt;B&lt;/td&gt;
+					&lt;td&gt;D&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;/tbody&gt;
+					&lt;/table&gt;
 				</code></pre>
                   </li>
                 </ul>
