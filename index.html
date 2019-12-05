@@ -90,10 +90,10 @@
               ></span
               >HTML</a
             >
-            <ul class="uk-nav-sub">
+            <ul class="uk-nav-sub uk-nav" data-uk-nav>
               <li><a uk-scroll title="Uvod" href="#uvod">Uvod</a></li>
-              <li>
-                <a title="Text" href="#">Text</a>
+              <li class="uk-parent">
+                <a title="Text" href="#">Text <span uk-icon="chevron-down"></span></a>
                 <ul class="uk-nav-sub">
                   <li><a uk-scroll title="text-1" href="#text-1">Lekcija 01</a></li>
                   <li><a uk-scroll title="text-2" href="#text-2">Lekcija 02</a></li>
@@ -112,30 +112,31 @@
                 </ul>
               </li>
               <li><a uk-scroll title="Liste" href="#liste">Liste</a></li>
-			  <li><a uk-scroll title="Grafika" href="#">Grafika</a>
-				<ul class="uk-nav-sub">
+			  <li class="uk-parent"><a uk-scroll title="Grafika" href="#">Grafika <span uk-icon="chevron-down"></span></a>
+				<ul class="uk-nav-sub uk-nav" data-uk-nav>
 					<li><a uk-scroll title="grafika-1" href="#grafika-1">Lekcija 1 Img</a></li>
 					<li><a uk-scroll title="grafika-2" href="#grafika-2">Lekcija 2 SVG</a></li>
 					<li><a uk-scroll title="grafika-3" href="#grafika-3">Lekcija 3 Canvas</a></li>
 				</ul>
 			</li>
               <li><a uk-scroll title="Audio/Video" href="#audio-video">Audio/Video</a></li>
-			  <li><a uk-scroll title="Linkovi" href="#linkovi">Linkovi</a>
-			<ul class="uk-nav-sub">
+			  <li class="uk-parent"><a uk-scroll title="Linkovi" href="#linkovi">Linkovi <span uk-icon="chevron-down"></span></a>
+			<ul class="uk-nav-sub uk-nav" data-uk-nav>
 				<li><a uk-scroll title="Linkovi" href="#linkovi">Lekcija</a></li>
 				<li><a uk-scroll title="Linkovi zadatak" href="#linkoviZadatak">Zadatak</a></li>
 			</ul>
-		</li>
-			  <a uk-scroll title="Tablice" href="#tablice">Tablice</a>
-				<ul class="uk-nav-sub">
+			  </li>
+		<li class="uk-parent">
+			  <a uk-scroll title="Tablice" href="#tablice">Tablice <span uk-icon="chevron-down"></span></a>
+				<ul class="uk-nav-sub uk-nav" data-uk-nav>
 					<li><a uk-scroll title="Tablice" href="#tablice">Lekcija</a></li>
 					<li><a uk-scroll title="Tablice zadatak 1" href="#tabliceZadatak-1">Zadatak 1</a></li>
 					<li><a uk-scroll title="Tablice zadatak 2" href="#tabliceZadatak-2">Zadatak 2</a></li>
 					<li><a uk-scroll title="Tablice zadatak 3" href="#tabliceZadatak-3">Zadatak 3</a></li>
 				</ul>
 			</li>
-			  <li><a uk-scroll title="Obrasci" href="#obrasci">Obrasci</a>
-			<ul class="uk-nav-sub">
+			  <li class="uk-parent"><a uk-scroll title="Obrasci" href="#obrasci">Obrasci <span uk-icon="chevron-down"></span></a>
+			<ul class="uk-nav-sub uk-nav" data-uk-nav>
 				<li><a uk-scroll title="Obrasci Lekcija" href="#obrasci">Lekcija</a></li>
 				<li><a uk-scroll title="Obrasci zadatak" href="#obrasciZadatak">Zadatak</a></li>
 			</ul>
@@ -3803,56 +3804,53 @@ height=&quot;404&quot;&gt;&lt;/video&gt;
               ></span
               >HTML</a
             >
-            <ul class="uk-nav-sub">
-              <li><a uk-scroll title="Uvod" href="#">Uvod</a></li>
-              <li>
-                <a uk-scroll title="Text" href="#">Text</a>
-                <ul class="uk-nav-sub">
-                  <li><a uk-scroll title="text-1" href="#text-1">Lekcija 01</a></li>
-                  <li><a uk-scroll title="text-2" href="#text-2">Lekcija 02</a></li>
-                  <li><a uk-scroll title="text-3" href="#text-3">Lekcija 03</a></li>
-                  <li><a uk-scroll title="text-4" href="#text-4">Lekcija 04</a></li>
-                  <li>
-                    <a uk-scroll title="text zadatak-1" href="#textZadatak-1"
-                      >Zadatak 01</a
-                    >
-                  </li>
-                  <li>
-                    <a uk-scroll title="text zadatak-2" href="#textZadatak-2"
-                      >Zadatak 02</a
-                    >
-                  </li>
-                </ul>
-              </li>
-			<li><a uk-scroll title="Liste" href="#liste">Liste</a></li>
-			<li><a uk-scroll title="Grafika" href="#">Grafika</a>
-				<ul class="uk-nav-sub">
-					<li><a uk-scroll title="grafika-1" href="#grafika-1">Lekcija 1 Img</a></li>
-					<li><a uk-scroll title="grafika-2" href="#grafika-2">Lekcija 2 SVG</a></li>
-					<li><a uk-scroll title="grafika-3" href="#grafika-3">Lekcija 3 Canvas</a></li>
-				</ul>
-			</li>
-			<li><a uk-scroll title="Audio/Video" href="#audio-video">Audio/Video</a></li>
-			<li><a uk-scroll title="Linkovi" href="#linkovi">Linkovi</a>
-				<ul class="uk-nav-sub">
-					<li><a uk-scroll title="Linkovi" href="#linkovi">Lekcija</a></li>
-					<li><a uk-scroll title="Linkovi zadatak" href="#linkoviZadatak">Zadatak</a></li>
-				</ul>
-			</li>
-			<a uk-scroll title="Tablice" href="#tablice">Tablice</a>
-			<ul class="uk-nav-sub">
-				<li><a uk-scroll title="Tablice" href="#tablice">Lekcija</a></li>
-				<li><a uk-scroll title="Tablice zadatak 1" href="#tabliceZadatak-1">Zadatak 1</a></li>
-				<li><a uk-scroll title="Tablice zadatak 2" href="#tabliceZadatak-2">Zadatak 2</a></li>
-				<li><a uk-scroll title="Tablice zadatak 3" href="#tabliceZadatak-3">Zadatak 3</a></li>
-			</ul>
-			</li>
-			  <li><a uk-scroll title="Obrasci" href="#obrasci">Obrasci</a>
-				<ul class="uk-nav-sub">
-					<li><a uk-scroll title="Obrasci Lekcija" href="#obrasci">Lekcija</a></li>
-					<li><a uk-scroll title="Obrasci zadatak" href="#obrasciZadatak">Zadatak</a></li>
-				</ul>
-			</li>
+			<ul class="uk-nav-sub uk-nav" data-uk-nav>
+				<li><a uk-scroll title="Uvod" href="#uvod">Uvod</a></li>
+				<li class="uk-parent">
+					<a title="Text" href="#">Text <span uk-icon="chevron-down"></span></a>
+					<ul class="uk-nav-sub">
+						<li><a uk-scroll title="text-1" href="#text-1">Lekcija 01</a></li>
+						<li><a uk-scroll title="text-2" href="#text-2">Lekcija 02</a></li>
+						<li><a uk-scroll title="text-3" href="#text-3">Lekcija 03</a></li>
+						<li><a uk-scroll title="text-4" href="#text-4">Lekcija 04</a></li>
+						<li>
+							<a uk-scroll title="text zadatak-1" href="#textZadatak-1">Zadatak 01</a>
+						</li>
+						<li>
+							<a uk-scroll title="text zadatak-2" href="#textZadatak-2">Zadatak 02</a>
+						</li>
+					</ul>
+				</li>
+				<li><a uk-scroll title="Liste" href="#liste">Liste</a></li>
+				<li class="uk-parent"><a uk-scroll title="Grafika" href="#">Grafika <span uk-icon="chevron-down"></span></a>
+					<ul class="uk-nav-sub uk-nav" data-uk-nav>
+						<li><a uk-scroll title="grafika-1" href="#grafika-1">Lekcija 1 Img</a></li>
+						<li><a uk-scroll title="grafika-2" href="#grafika-2">Lekcija 2 SVG</a></li>
+						<li><a uk-scroll title="grafika-3" href="#grafika-3">Lekcija 3 Canvas</a></li>
+					</ul>
+				</li>
+				<li><a uk-scroll title="Audio/Video" href="#audio-video">Audio/Video</a></li>
+				<li class="uk-parent"><a uk-scroll title="Linkovi" href="#linkovi">Linkovi <span uk-icon="chevron-down"></span></a>
+					<ul class="uk-nav-sub uk-nav" data-uk-nav>
+						<li><a uk-scroll title="Linkovi" href="#linkovi">Lekcija</a></li>
+						<li><a uk-scroll title="Linkovi zadatak" href="#linkoviZadatak">Zadatak</a></li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a uk-scroll title="Tablice" href="#tablice">Tablice <span uk-icon="chevron-down"></span></a>
+					<ul class="uk-nav-sub uk-nav" data-uk-nav>
+						<li><a uk-scroll title="Tablice" href="#tablice">Lekcija</a></li>
+						<li><a uk-scroll title="Tablice zadatak 1" href="#tabliceZadatak-1">Zadatak 1</a></li>
+						<li><a uk-scroll title="Tablice zadatak 2" href="#tabliceZadatak-2">Zadatak 2</a></li>
+						<li><a uk-scroll title="Tablice zadatak 3" href="#tabliceZadatak-3">Zadatak 3</a></li>
+					</ul>
+				</li>
+				<li class="uk-parent"><a uk-scroll title="Obrasci" href="#obrasci">Obrasci <span uk-icon="chevron-down"></span></a>
+					<ul class="uk-nav-sub uk-nav" data-uk-nav>
+						<li><a uk-scroll title="Obrasci Lekcija" href="#obrasci">Lekcija</a></li>
+						<li><a uk-scroll title="Obrasci zadatak" href="#obrasciZadatak">Zadatak</a></li>
+					</ul>
+				</li>
               <li>
                 <a uk-scroll title="Strukturiranje sadržaja" href="#"
                   >Strukturiranje sadržaja</a
