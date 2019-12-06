@@ -141,11 +141,19 @@
 				<li><a uk-scroll title="Obrasci zadatak" href="#obrasciZadatak">Zadatak</a></li>
 			</ul>
 			</li>
-              <li>
-                <a title="Strukturiranje sadržaja" href="#"
-                  >Strukturiranje sadržaja</a
-                >
-              </li>
+			<li class="uk-parent">
+				<a uk-scroll title="Strukturiranje sadržaja" href="#strukturiranje-sadrzaja">Strukturiranje sadržaja <span
+						uk-icon="chevron-down"></span></a>
+				<ul class="uk-nav-sub uk-nav" data-uk-nav>
+					<li><a uk-scroll title="Strukturiranje sadržaja primjer 1" href="#strukturiranje-sadrzaja-primjer1">Lekcija</a>
+					</li>
+					<li><a uk-scroll title="Strukturiranje sadržaja primjer 2" href="#strukturiranje-sadrzaja-primjer2">Lekcija</a>
+					</li>
+					<li><a uk-scroll title="Strukturiranje sadržaja primjer 3" href="#strukturiranje-sadrzaja-primjer3">Lekcija</a>
+					</li>
+					<li><a uk-scroll title="Strukturiranje sadržaja zadaća" href="#strukturiranje-sadrzaja-zadaca">Zadaća</a></li>
+				</ul>
+			</li>
             </ul>
           </li>
           <hr />
@@ -3748,6 +3756,269 @@ height=&quot;404&quot;&gt;&lt;/video&gt;
             </div>
           </div>
         </div>
+        <div
+          id="strukturiranje-sadrzaja-primjer1"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Strukturiranje sadržaja</h4>
+                  </div>
+                  <p>Primjer 1</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<div id="header">
+						zaglavlje stranice
+						(naslov stranice, logo, navigacija, uvodni tekst...)
+					</div>
+					<div id="content">
+						glavni sadržaj stranice
+						(naslovi, odlomci teksta, slike, multimedija, obrasci ...)
+					</div>
+					<div id="footer">
+						podnožje stranice
+						(opće informacije, linkovi, kontakti, copyright ...)
+					</div>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;div id=&quot;header&quot;&gt;
+					zaglavlje stranice
+					(naslov stranice, logo, navigacija, uvodni tekst...)
+					&lt;/div&gt;
+					&lt;div id=&quot;content&quot;&gt;
+					glavni sadržaj stranice
+					(naslovi, odlomci teksta, slike, multimedija, obrasci ...)
+					&lt;/div&gt;
+					&lt;div id=&quot;footer&quot;&gt;
+					podnožje stranice
+					(opće informacije, linkovi, kontakti, copyright ...)
+					&lt;/div&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="strukturiranje-sadrzaja-primjer2"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Strukturiranje sadržaja</h4>
+                  </div>
+                  <p>Primjer 2</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<header>
+						zaglavlje stranice
+						(naslov stranice, logo, navigacija, uvodni tekst...)
+					</header>
+					<main>
+						glavni sadržaj stranice
+						(naslovi, odlomci teksta, slike, multimedija, obrasci ...)
+					</main>
+					<footer>
+						podnožje stranice
+						(opće informacije, linkovi, kontakti, copyright ...)
+					</footer>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;header&gt;
+					zaglavlje stranice
+					(naslov stranice, logo, navigacija, uvodni tekst...)
+					&lt;/header&gt;
+					&lt;main&gt;
+					glavni sadržaj stranice
+					(naslovi, odlomci teksta, slike, multimedija, obrasci ...)
+					&lt;/main&gt;
+					&lt;footer&gt;
+					podnožje stranice
+					(opće informacije, linkovi, kontakti, copyright ...)
+					&lt;/footer&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="strukturiranje-sadrzaja-primjer3"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Strukturiranje sadržaj</h4>
+                  </div>
+                  <p>Primjer 3</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+					<header>
+						Zaglavlje stranice ili zaglavlje određenog dijela stranice
+						<nav>Navigacija stranice</nav>
+					</header>
+					<main>
+						Glavni sadržaj stranice
+						<section>Generička sekcija sadržaja</section>
+						<article>Cjelinu neovisnog, samostalnog sadržaja u dokumentu</article>
+						<aside>Cjelina sadržaja koja nije direktno povezana sa sadržajem koji je okružuje</aside>
+						<figure>
+							Samostalni sadržaj (slika, ilustracija i sl.) s neobaveznim nazivom (figcaption)
+							<figcaption>Naziv ili opis sadržaja u elementu figure</figcaption>
+						</figure>
+					</main>
+					<footer>
+						Podnožje stranice ili podnožje određenog dijela stranice
+					</footer>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;header&gt;
+					Zaglavlje stranice ili zaglavlje određenog dijela stranice
+					&lt;nav&gt;Navigacija stranice&lt;/nav&gt;
+					&lt;/header&gt;
+					&lt;main&gt;
+					Glavni sadržaj stranice
+					&lt;section&gt;Generička sekcija sadržaja&lt;/section&gt;
+					&lt;article&gt;Cjelinu neovisnog, samostalnog sadržaja u dokumentu&lt;/article&gt;
+					&lt;aside&gt;Cjelina sadržaja koja nije direktno povezana sa sadržajem koji je okružuje&lt;/aside&gt;
+					&lt;figure&gt;
+					Samostalni sadržaj (slika, ilustracija i sl.) s neobaveznim nazivom (figcaption)
+					&lt;figcaption&gt;Naziv ili opis sadržaja u elementu figure&lt;/figcaption&gt;
+					&lt;/figure&gt;
+					&lt;/main&gt;
+					&lt;footer&gt;
+					Podnožje stranice ili podnožje određenog dijela stranice
+					&lt;/footer&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="strukturiranje-sadrzaja-zadaca"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Strukturiranje sadržaja</h4>
+                  </div>
+                  <p>Zadaća</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+				<p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html,result" data-user="Igor86"
+					data-slug-hash="NWPGxjP" data-preview="true"
+					style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+					data-pen-title="Strukturiranje sadržaja">
+					<span>See the Pen <a href="https://codepen.io/Igor86/pen/NWPGxjP">
+							Strukturiranje sadržaja</a> by Igor (<a href="https://codepen.io/Igor86">@Igor86</a>)
+						on <a href="https://codepen.io">CodePen</a>.</span>
+				</p>
+				<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div
+          id="tex"
+          class="uk-grid uk-grid-medium viewport-height"
+          data-uk-grid
+        >
+          <div class="uk-width-1-1@l">
+            <div class="uk-card uk-card-default uk-card">
+              <div class="uk-card-header">
+                <div class="uk-grid uk-grid-small">
+                  <div class="uk-width-auto">
+                    <h4>Text</h4>
+                  </div>
+                  <p>Lekcija 02</p>
+                </div>
+              </div>
+              <div class="uk-card-body">
+                <ul
+                  uk-tab
+                  uk-switcher="connect: #test; animation: uk-animation-fade;"
+                >
+                  <li class="uk-active"><a href="#">Preview</a></li>
+                  <li><a href="#">Markup</a></li>
+                </ul>
+                <ul id="test" class="uk-switcher uk-margin">
+                  <li>
+                    <h1>Naslov 1. razine</h1>
+                    <h2>Naslov 2. razine</h2>
+                    <h3>Naslov 3. razine</h3>
+                    <h4>Naslov 4. razine</h4>
+                    <h5>Naslov 5. razine</h5>
+                    <h6>Naslov 6. razine</h6>
+                  </li>
+                  <li>
+                    <pre><code>
+					&lt;h1&gt;Naslov 1. razine&lt;/h1&gt;
+					&lt;h2&gt;Naslov 2. razine&lt;/h2&gt;
+					&lt;h3&gt;Naslov 3. razine&lt;/h3&gt;
+					&lt;h4&gt;Naslov 4. razine&lt;/h4&gt;
+					&lt;h5&gt;Naslov 5. razine&lt;/h5&gt;
+					&lt;h6&gt;Naslov 6. razine&lt;/h6&gt;
+				</code></pre>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> -->
         <!-- <div
           id="tex"
           class="uk-grid uk-grid-medium viewport-height"
@@ -3869,10 +4140,15 @@ height=&quot;404&quot;&gt;&lt;/video&gt;
 						<li><a uk-scroll title="Obrasci zadatak" href="#obrasciZadatak">Zadatak</a></li>
 					</ul>
 				</li>
-              <li>
-                <a uk-scroll title="Strukturiranje sadržaja" href="#"
-                  >Strukturiranje sadržaja</a
-                >
+              <li class="uk-parent">
+                <a uk-scroll title="Strukturiranje sadržaja" href="#strukturiranje-sadrzaja"
+				  >Strukturiranje sadržaja <span uk-icon="chevron-down"></span></a>
+				<ul class="uk-nav-sub uk-nav" data-uk-nav>
+					<li><a uk-scroll title="Strukturiranje sadržaja primjer 1" href="#strukturiranje-sadrzaja-primjer1">Lekcija</a></li>
+					<li><a uk-scroll title="Strukturiranje sadržaja primjer 2" href="#strukturiranje-sadrzaja-primjer2">Lekcija</a></li>
+					<li><a uk-scroll title="Strukturiranje sadržaja primjer 3" href="#strukturiranje-sadrzaja-primjer3">Lekcija</a></li>
+					<li><a uk-scroll title="Strukturiranje sadržaja zadaća" href="#strukturiranje-sadrzaja-zadaca">Zadaća</a></li>
+				</ul>
               </li>
             </ul>
           </li>
